@@ -1,330 +1,330 @@
 {
-    'onabort':
+    "onabort":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'onafterprint':
+    "onafterprint":
     {
-        'applies_to': 'body'
+        "applies_to": "body"
     },
-    'onauxclick':
+    "onauxclick":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'onbeforeprint':
+    "onbeforeprint":
     {
-        'applies_to': 'body'
+        "applies_to": "body"
     },
-    'onbeforeunload':
+    "onbeforeunload":
     {
-        'applies_to': 'body'
+        "applies_to": "body"
     },
-    'onblur':
+    "onblur":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'oncancel':
+    "oncancel":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'oncanplay':
+    "oncanplay":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'oncanplaythrough':
+    "oncanplaythrough":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'onchange':
+    "onchange":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'onclick':
+    "onclick":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'onclose':
+    "onclose":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'oncontextmenu':
+    "oncontextmenu":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'oncopy':
+    "oncopy":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'oncuechange':
+    "oncuechange":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'oncut':
+    "oncut":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'ondblclick':
+    "ondblclick":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'ondrag':
+    "ondrag":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'ondragend':
+    "ondragend":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'ondragenter':
+    "ondragenter":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'ondragexit':
+    "ondragexit":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'ondragleave':
+    "ondragleave":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'ondragover':
+    "ondragover":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'ondragstart':
+    "ondragstart":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'ondrop':
+    "ondrop":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'ondurationchange':
+    "ondurationchange":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'onemptied':
+    "onemptied":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'onended':
+    "onended":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'onerror':
+    "onerror":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'onfocus':
+    "onfocus":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'onformdata':
+    "onformdata":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'onhashchange':
+    "onhashchange":
     {
-        'applies_to': 'body'
+        "applies_to": "body"
     },
-    'oninput':
+    "oninput":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'oninvalid':
+    "oninvalid":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'onkeydown':
+    "onkeydown":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'onkeypress':
+    "onkeypress":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'onkeyup':
+    "onkeyup":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'onlanguagechange':
+    "onlanguagechange":
     {
-        'applies_to': 'body'
+        "applies_to": "body"
     },
-    'onload':
+    "onload":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'onloadeddata':
+    "onloadeddata":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'onloadedmetadata':
+    "onloadedmetadata":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'onloadend':
+    "onloadend":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'onloadstart':
+    "onloadstart":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'onmessage':
+    "onmessage":
     {
-        'applies_to': 'body'
+        "applies_to": "body"
     },
-    'onmessageerror':
+    "onmessageerror":
     {
-        'applies_to': 'body'
+        "applies_to": "body"
     },
-    'onmousedown':
+    "onmousedown":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'onmouseenter':
+    "onmouseenter":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'onmouseleave':
+    "onmouseleave":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'onmousemove':
+    "onmousemove":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'onmouseout':
+    "onmouseout":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'onmouseover':
+    "onmouseover":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'onmouseup':
+    "onmouseup":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'onoffline':
+    "onoffline":
     {
-        'applies_to': 'body'
+        "applies_to": "body"
     },
-    'ononline':
+    "ononline":
     {
-        'applies_to': 'body'
+        "applies_to": "body"
     },
-    'onpagehide':
+    "onpagehide":
     {
-        'applies_to': 'body'
+        "applies_to": "body"
     },
-    'onpageshow':
+    "onpageshow":
     {
-        'applies_to': 'body'
+        "applies_to": "body"
     },
-    'onpaste':
+    "onpaste":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'onpause':
+    "onpause":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'onplay':
+    "onplay":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'onplaying':
+    "onplaying":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'onpopstate':
+    "onpopstate":
     {
-        'applies_to': 'body'
+        "applies_to": "body"
     },
-    'onprogress':
+    "onprogress":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'onratechange':
+    "onratechange":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'onrejectionhandled':
+    "onrejectionhandled":
     {
-        'applies_to': 'body'
+        "applies_to": "body"
     },
-    'onreset':
+    "onreset":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'onresize':
+    "onresize":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'onscroll':
+    "onscroll":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'onsecuritypolicyviolation':
+    "onsecuritypolicyviolation":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'onseeked':
+    "onseeked":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'onseeking':
+    "onseeking":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'onselect':
+    "onselect":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'onstalled':
+    "onstalled":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'onstorage':
+    "onstorage":
     {
-        'applies_to': 'body'
+        "applies_to": "body"
     },
-    'onsubmit':
+    "onsubmit":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'onsuspend':
+    "onsuspend":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'ontimeupdate':
+    "ontimeupdate":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'ontoggle':
+    "ontoggle":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'onunhandledrejection':
+    "onunhandledrejection":
     {
-        'applies_to': 'body'
+        "applies_to": "body"
     },
-    'onunload':
+    "onunload":
     {
-        'applies_to': 'body'
+        "applies_to": "body"
     },
-    'onvolumechange':
+    "onvolumechange":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'onwaiting':
+    "onwaiting":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     },
-    'onwheel':
+    "onwheel":
     {
-        'applies_to': 'HTML elements'
+        "applies_to": "HTML elements"
     }
 }

@@ -1,5 +1,6 @@
 from util import *
 import types
+import json
 
 
 def pformat_list(xs, indent=0):
@@ -21,22 +22,22 @@ def pformat_set(xs, indent=0):
     t = "    "*indent
 
     if not xs:
-        yield "{}"
+        yield "[]"
         return
 
     if xs and len(xs) == 1:
-        yield "{"
+        yield "["
         yield repr(next(iter(xs)))
-        yield "}"
+        yield "]"
         return
 
-    yield t + "{\n"
+    yield t + "[\n"
     for value, last in list_lastitems(sorted(xs)):
         if isinstance(value, str):
             yield from pformat(value, indent+1)
         if not last: yield ","
         yield "\n"
-    yield t + "}"
+    yield t + "]"
 
 
 def pformat_dict(xs, indent=0):
@@ -49,10 +50,10 @@ def pformat_dict(xs, indent=0):
     yield t + "{\n"
     for key, last in list_lastitems(sorted(xs.keys())):
         value = xs[key]
-        yield t + "    %s:" % repr(key)
+        yield t + "    %s:" % json.dumps(key)
         if isinstance(value, str):
             yield " "
-            yield repr(value)
+            yield json.dumps(value)
         else:
             if isinstance(value, types.GeneratorType):
                 value = list(value)
@@ -69,7 +70,7 @@ def pformat(xs, indent=0):
     elif isinstance(xs, tuple):
         yield "    "*indent + "<tuple>"+repr(xs)
     elif isinstance(xs, str):
-        yield "    "*indent + repr(xs)
+        yield "    "*indent + json.dumps(xs)
     elif isinstance(xs, set):
         yield from pformat_set(xs, indent)
     elif isinstance(xs, dict):
