@@ -4,7 +4,7 @@ COPYING html5spec.json
 Python files
 ------------
 
-Copyright © 2019 Ben Golightly <ben@tawesoft.co.uk>
+Copyright © 2019 Ben Golightly <ben@tawesoft.co.uk>  
 Copyright © 2019 Tawesoft Ltd <opensource@tawesoft.co.uk>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
