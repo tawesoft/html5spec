@@ -1,0 +1,1179 @@
+{
+    'abbr':
+    {
+        'desc': 'Alternative label to use for the header cell when referencing the cell in other contexts',
+        'elements': {'th'},
+        'value_keywords': {},
+        'value_type': 'Text. The actual rules are more complicated than indicated.'
+    },
+    'accept':
+    {
+        'desc': 'Hint for expected file type in file upload controls',
+        'elements': {'input'},
+        'value_keywords': {},
+        'value_type': 'Set of comma-separated tokens* consisting of valid MIME type strings with no parameters or audio/*, video/*, or image/. The actual rules are more complicated than indicated.'
+    },
+    'accept-charset':
+    {
+        'desc': 'Character encodings to use for form submission',
+        'elements': {'form'},
+        'value_keywords': {},
+        'value_type': 'ASCII case-insensitive match for "UTF-8"'
+    },
+    'accesskey':
+    {
+        'desc': 'Keyboard shortcut to activate or focus element',
+        'elements': {'HTML'},
+        'value_keywords': {},
+        'value_type': 'Ordered set of unique space-separated tokens, case-sensitive, consisting of one code point in length'
+    },
+    'action':
+    {
+        'desc': 'URL to use for form submission',
+        'elements': {'form'},
+        'value_keywords': {},
+        'value_type': 'Valid non-empty URL potentially surrounded by spaces'
+    },
+    'allow':
+    {
+        'desc': "Feature policy to be applied to the iframe's contents",
+        'elements': {'iframe'},
+        'value_keywords': {},
+        'value_type': 'Serialized feature policy'
+    },
+    'allowfullscreen':
+    {
+        'desc': "Whether to allow the iframe's contents to use requestFullscreen()",
+        'elements': {'iframe'},
+        'value_keywords': {},
+        'value_type': 'Boolean attribute'
+    },
+    'allowpaymentrequest':
+    {
+        'desc': "Whether the iframe's contents are allowed to use the PaymentRequest interface to make payment requests",
+        'elements': {'iframe'},
+        'value_keywords': {},
+        'value_type': 'Boolean attribute'
+    },
+    'alt':
+    {
+        'desc': 'Replacement text for use when images are not available',
+        'elements':
+        {
+            'area',
+            'img',
+            'input'
+        },
+        'value_keywords': {},
+        'value_type': 'Text. The actual rules are more complicated than indicated.'
+    },
+    'as':
+    {
+        'desc': 'Potential destination for a preload request (for rel="preload" and rel="modulepreload")',
+        'elements': {'link'},
+        'value_keywords': {},
+        'value_type': 'Potential destination, for rel="preload"; script-like destination, for rel="modulepreload"'
+    },
+    'async':
+    {
+        'desc': 'Execute script when available, without blocking while fetching',
+        'elements': {'script'},
+        'value_keywords': {},
+        'value_type': 'Boolean attribute'
+    },
+    'autocapitalize':
+    {
+        'desc': 'Recommended autocapitalization behavior (for supported input methods)',
+        'elements': {'HTML'},
+        'value_keywords':
+        {
+            'characters',
+            'none',
+            'off',
+            'on',
+            'sentences',
+            'words'
+        },
+        'value_type': '"on"; "off"; "none"; "sentences"; "words"; "characters"'
+    },
+    'autocomplete':
+    {
+        'desc': 'Hint for form autofill feature',
+        'elements':
+        {
+            'input',
+            'select',
+            'textarea'
+        },
+        'value_keywords': {},
+        'value_type': 'Autofill field name and related tokens. The actual rules are more complicated than indicated.'
+    },
+    'autofocus':
+    {
+        'desc': 'Automatically focus the form control when the page is loaded',
+        'elements':
+        {
+            'button',
+            'input',
+            'select',
+            'textarea'
+        },
+        'value_keywords': {},
+        'value_type': 'Boolean attribute'
+    },
+    'autoplay':
+    {
+        'desc': 'Hint that the media resource can be started automatically when the page is loaded',
+        'elements':
+        {
+            'audio',
+            'video'
+        },
+        'value_keywords': {},
+        'value_type': 'Boolean attribute'
+    },
+    'charset':
+    {
+        'desc': 'Character encoding declaration',
+        'elements': {'meta'},
+        'value_keywords': {'utf-8'},
+        'value_type': '"utf-8"'
+    },
+    'checked':
+    {
+        'desc': 'Whether the control is checked',
+        'elements': {'input'},
+        'value_keywords': {},
+        'value_type': 'Boolean attribute'
+    },
+    'cite':
+    {
+        'desc': 'Link to the source of the quotation or more information about the edit',
+        'elements':
+        {
+            'blockquote',
+            'del',
+            'ins',
+            'q'
+        },
+        'value_keywords': {},
+        'value_type': 'Valid URL potentially surrounded by spaces'
+    },
+    'class':
+    {
+        'desc': 'Classes to which the element belongs',
+        'elements': {'HTML'},
+        'value_keywords': {},
+        'value_type': 'Set of space-separated tokens'
+    },
+    'color':
+    {
+        'desc': 'Color to use when customizing a site\'s icon (for rel="mask-icon")',
+        'elements': {'link'},
+        'value_keywords': {},
+        'value_type': 'CSS <color>'
+    },
+    'cols':
+    {
+        'desc': 'Maximum number of characters per line',
+        'elements': {'textarea'},
+        'value_keywords': {},
+        'value_type': 'Valid non-negative integer greater than zero'
+    },
+    'colspan':
+    {
+        'desc': 'Number of columns that the cell is to span',
+        'elements':
+        {
+            'td',
+            'th'
+        },
+        'value_keywords': {},
+        'value_type': 'Valid non-negative integer greater than zero'
+    },
+    'content':
+    {
+        'desc': 'Value of the element',
+        'elements': {'meta'},
+        'value_keywords': {},
+        'value_type': 'Text. The actual rules are more complicated than indicated.'
+    },
+    'contenteditable':
+    {
+        'desc': 'Whether the element is editable',
+        'elements': {'HTML'},
+        'value_keywords':
+        {
+            'false',
+            'true'
+        },
+        'value_type': '"true"; "false"'
+    },
+    'controls':
+    {
+        'desc': 'Show user agent controls',
+        'elements':
+        {
+            'audio',
+            'video'
+        },
+        'value_keywords': {},
+        'value_type': 'Boolean attribute'
+    },
+    'coords':
+    {
+        'desc': 'Coordinates for the shape to be created in an image map',
+        'elements': {'area'},
+        'value_keywords': {},
+        'value_type': 'Valid list of floating-point numbers. The actual rules are more complicated than indicated.'
+    },
+    'crossorigin':
+    {
+        'desc': 'How the element handles crossorigin requests',
+        'elements':
+        {
+            'audio',
+            'img',
+            'link',
+            'script',
+            'video'
+        },
+        'value_keywords':
+        {
+            'anonymous',
+            'use-credentials'
+        },
+        'value_type': '"anonymous"; "use-credentials"'
+    },
+    'data':
+    {
+        'desc': 'Address of the resource',
+        'elements': {'object'},
+        'value_keywords': {},
+        'value_type': 'Valid non-empty URL potentially surrounded by spaces'
+    },
+    'datetime':
+    {
+        'desc': 'Machine-readable value',
+        'elements': {'time'},
+        'value_keywords': {},
+        'value_type': 'Valid month string, valid date string, valid yearless date string, valid time string, valid local date and time string, valid time-zone offset string, valid global date and time string, valid week string, valid non-negative integer, or valid duration string'
+    },
+    'decoding':
+    {
+        'desc': 'Decoding hint to use when processing this image for presentation',
+        'elements': {'img'},
+        'value_keywords':
+        {
+            'async',
+            'auto',
+            'sync'
+        },
+        'value_type': '"sync"; "async"; "auto"'
+    },
+    'default':
+    {
+        'desc': 'Enable the track if no other text track is more suitable',
+        'elements': {'track'},
+        'value_keywords': {},
+        'value_type': 'Boolean attribute'
+    },
+    'defer':
+    {
+        'desc': 'Defer script execution',
+        'elements': {'script'},
+        'value_keywords': {},
+        'value_type': 'Boolean attribute'
+    },
+    'dir':
+    {
+        'desc': 'The text directionality of the element',
+        'elements': {'bdo'},
+        'value_keywords':
+        {
+            'ltr',
+            'rtl'
+        },
+        'value_type': '"ltr"; "rtl"'
+    },
+    'dirname':
+    {
+        'desc': "Name of form control to use for sending the element's directionality in form submission",
+        'elements':
+        {
+            'input',
+            'textarea'
+        },
+        'value_keywords': {},
+        'value_type': 'Text. The actual rules are more complicated than indicated.'
+    },
+    'disabled':
+    {
+        'desc': 'Whether the descendant form controls, except any inside legend, are disabled',
+        'elements': {'fieldset'},
+        'value_keywords': {},
+        'value_type': 'Boolean attribute'
+    },
+    'download':
+    {
+        'desc': 'Whether to download the resource instead of navigating to it, and its file name if so',
+        'elements':
+        {
+            'a',
+            'area'
+        },
+        'value_keywords': {},
+        'value_type': 'Text'
+    },
+    'draggable':
+    {
+        'desc': 'Whether the element is draggable',
+        'elements': {'HTML'},
+        'value_keywords':
+        {
+            'false',
+            'true'
+        },
+        'value_type': '"true"; "false"'
+    },
+    'enctype':
+    {
+        'desc': 'Entry list encoding type to use for form submission',
+        'elements': {'form'},
+        'value_keywords': {},
+        'value_type': '"application/x-www-form-urlencoded"; "multipart/form-data"; "text/plain"'
+    },
+    'enterkeyhint':
+    {
+        'desc': 'Hint for selecting an enter key action',
+        'elements': {'HTML'},
+        'value_keywords': {},
+        'value_type': '"enter"; "done"; "go"; "next"; "previous"; "search" "send"'
+    },
+    'for':
+    {
+        'desc': 'Specifies controls from which the output was calculated',
+        'elements': {'output'},
+        'value_keywords': {},
+        'value_type': 'Unordered set of unique space-separated tokens, case-sensitive, consisting of IDs. The actual rules are more complicated than indicated.'
+    },
+    'form':
+    {
+        'desc': 'Associates the element with a form element',
+        'elements':
+        {
+            'button',
+            'fieldset',
+            'input',
+            'object',
+            'output',
+            'select',
+            'textarea'
+        },
+        'value_keywords': {},
+        'value_type': 'ID. The actual rules are more complicated than indicated.'
+    },
+    'formaction':
+    {
+        'desc': 'URL to use for form submission',
+        'elements':
+        {
+            'button',
+            'input'
+        },
+        'value_keywords': {},
+        'value_type': 'Valid non-empty URL potentially surrounded by spaces'
+    },
+    'formenctype':
+    {
+        'desc': 'Entry list encoding type to use for form submission',
+        'elements':
+        {
+            'button',
+            'input'
+        },
+        'value_keywords': {},
+        'value_type': '"application/x-www-form-urlencoded"; "multipart/form-data"; "text/plain"'
+    },
+    'formmethod':
+    {
+        'desc': 'Variant to use for form submission',
+        'elements':
+        {
+            'button',
+            'input'
+        },
+        'value_keywords':
+        {
+            'GET',
+            'POST',
+            'dialog'
+        },
+        'value_type': '"GET"; "POST"; "dialog"'
+    },
+    'formnovalidate':
+    {
+        'desc': 'Bypass form control validation for form submission',
+        'elements':
+        {
+            'button',
+            'input'
+        },
+        'value_keywords': {},
+        'value_type': 'Boolean attribute'
+    },
+    'formtarget':
+    {
+        'desc': 'Browsing context for form submission',
+        'elements':
+        {
+            'button',
+            'input'
+        },
+        'value_keywords': {},
+        'value_type': 'Valid browsing context name or keyword'
+    },
+    'headers':
+    {
+        'desc': 'The header cells for this cell',
+        'elements':
+        {
+            'td',
+            'th'
+        },
+        'value_keywords': {},
+        'value_type': 'Unordered set of unique space-separated tokens, case-sensitive, consisting of IDs. The actual rules are more complicated than indicated.'
+    },
+    'height':
+    {
+        'desc': 'Vertical dimension',
+        'elements':
+        {
+            'canvas',
+            'embed',
+            'iframe',
+            'img',
+            'input',
+            'object',
+            'video'
+        },
+        'value_keywords': {},
+        'value_type': 'Valid non-negative integer'
+    },
+    'hidden':
+    {
+        'desc': 'Whether the element is relevant',
+        'elements': {'HTML'},
+        'value_keywords': {},
+        'value_type': 'Boolean attribute'
+    },
+    'high':
+    {
+        'desc': 'Low limit of high range',
+        'elements': {'meter'},
+        'value_keywords': {},
+        'value_type': 'Valid floating-point number. The actual rules are more complicated than indicated.'
+    },
+    'href':
+    {
+        'desc': 'Document base URL',
+        'elements': {'base'},
+        'value_keywords': {},
+        'value_type': 'Valid URL potentially surrounded by spaces'
+    },
+    'hreflang':
+    {
+        'desc': 'Language of the linked resource',
+        'elements':
+        {
+            'a',
+            'link'
+        },
+        'value_keywords': {},
+        'value_type': 'Valid BCP 47 language tag'
+    },
+    'http-equiv':
+    {
+        'desc': 'Pragma directive',
+        'elements': {'meta'},
+        'value_keywords':
+        {
+            'content-security-policy',
+            'content-type',
+            'default-style',
+            'refresh',
+            'x-ua-compatible'
+        },
+        'value_type': '"content-type"; "default-style"; "refresh"; "x-ua-compatible"; "content-security-policy"'
+    },
+    'id':
+    {
+        'desc': "The element's ID",
+        'elements': {'HTML'},
+        'value_keywords': {},
+        'value_type': 'Text. The actual rules are more complicated than indicated.'
+    },
+    'imagesizes':
+    {
+        'desc': 'Image sizes for different page layouts',
+        'elements': {'link'},
+        'value_keywords': {},
+        'value_type': 'Valid source size list'
+    },
+    'imagesrcset':
+    {
+        'desc': 'Images to use in different situations (e.g., high-resolution displays, small monitors, etc.)',
+        'elements': {'link'},
+        'value_keywords': {},
+        'value_type': 'Comma-separated list of image candidate strings'
+    },
+    'inputmode':
+    {
+        'desc': 'Hint for selecting an input modality',
+        'elements': {'HTML'},
+        'value_keywords':
+        {
+            'decimal',
+            'email',
+            'none',
+            'numeric',
+            'search',
+            'tel',
+            'text',
+            'url'
+        },
+        'value_type': '"none"; "text"; "tel"; "email"; "url"; "numeric"; "decimal"; "search"'
+    },
+    'integrity':
+    {
+        'desc': 'Integrity metadata used in Subresource Integrity checks [SRI]',
+        'elements':
+        {
+            'link',
+            'script'
+        },
+        'value_keywords': {},
+        'value_type': 'Text'
+    },
+    'is':
+    {
+        'desc': 'Creates a customized built-in element',
+        'elements': {'HTML'},
+        'value_keywords': {},
+        'value_type': 'Valid custom element name of a defined customized built-in element'
+    },
+    'ismap':
+    {
+        'desc': 'Whether the image is a server-side image map',
+        'elements': {'img'},
+        'value_keywords': {},
+        'value_type': 'Boolean attribute'
+    },
+    'itemid':
+    {
+        'desc': 'Global identifier for a microdata item',
+        'elements': {'HTML'},
+        'value_keywords': {},
+        'value_type': 'Valid URL potentially surrounded by spaces'
+    },
+    'itemprop':
+    {
+        'desc': 'Property names of a microdata item',
+        'elements': {'HTML'},
+        'value_keywords': {},
+        'value_type': 'Unordered set of unique space-separated tokens, case-sensitive, consisting of valid absolute URLs, defined property names, or text. The actual rules are more complicated than indicated.'
+    },
+    'itemref':
+    {
+        'desc': 'Referenced elements',
+        'elements': {'HTML'},
+        'value_keywords': {},
+        'value_type': 'Unordered set of unique space-separated tokens, case-sensitive, consisting of IDs. The actual rules are more complicated than indicated.'
+    },
+    'itemscope':
+    {
+        'desc': 'Introduces a microdata item',
+        'elements': {'HTML'},
+        'value_keywords': {},
+        'value_type': 'Boolean attribute'
+    },
+    'itemtype':
+    {
+        'desc': 'Item types of a microdata item',
+        'elements': {'HTML'},
+        'value_keywords': {},
+        'value_type': 'Unordered set of unique space-separated tokens, case-sensitive, consisting of valid absolute URL. The actual rules are more complicated than indicated.'
+    },
+    'kind':
+    {
+        'desc': 'The type of text track',
+        'elements': {'track'},
+        'value_keywords':
+        {
+            'captions',
+            'chapters',
+            'descriptions',
+            'metadata',
+            'subtitles'
+        },
+        'value_type': '"subtitles"; "captions"; "descriptions"; "chapters"; "metadata"'
+    },
+    'label':
+    {
+        'desc': 'User-visible label',
+        'elements':
+        {
+            'optgroup',
+            'option',
+            'track'
+        },
+        'value_keywords': {},
+        'value_type': 'Text'
+    },
+    'lang':
+    {
+        'desc': 'Language of the element',
+        'elements': {'HTML'},
+        'value_keywords': {},
+        'value_type': 'Valid BCP 47 language tag or the empty string'
+    },
+    'list':
+    {
+        'desc': 'List of autocomplete options',
+        'elements': {'input'},
+        'value_keywords': {},
+        'value_type': 'ID. The actual rules are more complicated than indicated.'
+    },
+    'loop':
+    {
+        'desc': 'Whether to loop the media resource',
+        'elements':
+        {
+            'audio',
+            'video'
+        },
+        'value_keywords': {},
+        'value_type': 'Boolean attribute'
+    },
+    'low':
+    {
+        'desc': 'High limit of low range',
+        'elements': {'meter'},
+        'value_keywords': {},
+        'value_type': 'Valid floating-point number. The actual rules are more complicated than indicated.'
+    },
+    'manifest':
+    {
+        'desc': 'Application cache manifest',
+        'elements': {'html'},
+        'value_keywords': {},
+        'value_type': 'Valid non-empty URL potentially surrounded by spaces'
+    },
+    'max':
+    {
+        'desc': 'Upper bound of range',
+        'elements':
+        {
+            'meter',
+            'progress'
+        },
+        'value_keywords': {},
+        'value_type': 'Valid floating-point number. The actual rules are more complicated than indicated.'
+    },
+    'maxlength':
+    {
+        'desc': 'Maximum length of value',
+        'elements':
+        {
+            'input',
+            'textarea'
+        },
+        'value_keywords': {},
+        'value_type': 'Valid non-negative integer'
+    },
+    'media':
+    {
+        'desc': 'Applicable media',
+        'elements':
+        {
+            'link',
+            'source',
+            'style'
+        },
+        'value_keywords': {},
+        'value_type': 'Valid media query list'
+    },
+    'method':
+    {
+        'desc': 'Variant to use for form submission',
+        'elements': {'form'},
+        'value_keywords':
+        {
+            'GET',
+            'POST',
+            'dialog'
+        },
+        'value_type': '"GET"; "POST"; "dialog"'
+    },
+    'min':
+    {
+        'desc': 'Lower bound of range',
+        'elements': {'meter'},
+        'value_keywords': {},
+        'value_type': 'Valid floating-point number. The actual rules are more complicated than indicated.'
+    },
+    'minlength':
+    {
+        'desc': 'Minimum length of value',
+        'elements':
+        {
+            'input',
+            'textarea'
+        },
+        'value_keywords': {},
+        'value_type': 'Valid non-negative integer'
+    },
+    'multiple':
+    {
+        'desc': 'Whether to allow multiple values',
+        'elements':
+        {
+            'input',
+            'select'
+        },
+        'value_keywords': {},
+        'value_type': 'Boolean attribute'
+    },
+    'muted':
+    {
+        'desc': 'Whether to mute the media resource by default',
+        'elements':
+        {
+            'audio',
+            'video'
+        },
+        'value_keywords': {},
+        'value_type': 'Boolean attribute'
+    },
+    'name':
+    {
+        'desc': 'Name of shadow tree slot',
+        'elements': {'slot'},
+        'value_keywords': {},
+        'value_type': 'Text'
+    },
+    'nomodule':
+    {
+        'desc': 'Prevents execution in user agents that support module scripts',
+        'elements': {'script'},
+        'value_keywords': {},
+        'value_type': 'Boolean attribute'
+    },
+    'nonce':
+    {
+        'desc': 'Cryptographic nonce used in Content Security Policy checks [CSP]',
+        'elements': {'HTML'},
+        'value_keywords': {},
+        'value_type': 'Text'
+    },
+    'novalidate':
+    {
+        'desc': 'Bypass form control validation for form submission',
+        'elements': {'form'},
+        'value_keywords': {},
+        'value_type': 'Boolean attribute'
+    },
+    'open':
+    {
+        'desc': 'Whether the dialog box is showing',
+        'elements': {'dialog'},
+        'value_keywords': {},
+        'value_type': 'Boolean attribute'
+    },
+    'optimum':
+    {
+        'desc': 'Optimum value in gauge',
+        'elements': {'meter'},
+        'value_keywords': {},
+        'value_type': 'Valid floating-point number. The actual rules are more complicated than indicated.'
+    },
+    'pattern':
+    {
+        'desc': "Pattern to be matched by the form control's value",
+        'elements': {'input'},
+        'value_keywords': {},
+        'value_type': 'Regular expression matching the JavaScript Pattern production'
+    },
+    'ping':
+    {
+        'desc': 'URLs to ping',
+        'elements':
+        {
+            'a',
+            'area'
+        },
+        'value_keywords': {},
+        'value_type': 'Set of space-separated tokens consisting of valid non-empty URLs'
+    },
+    'placeholder':
+    {
+        'desc': 'User-visible label to be placed within the form control',
+        'elements':
+        {
+            'input',
+            'textarea'
+        },
+        'value_keywords': {},
+        'value_type': 'Text. The actual rules are more complicated than indicated.'
+    },
+    'playsinline':
+    {
+        'desc': "Encourage the user agent to display video content within the element's playback area",
+        'elements': {'video'},
+        'value_keywords': {},
+        'value_type': 'Boolean attribute'
+    },
+    'poster':
+    {
+        'desc': 'Poster frame to show prior to video playback',
+        'elements': {'video'},
+        'value_keywords': {},
+        'value_type': 'Valid non-empty URL potentially surrounded by spaces'
+    },
+    'preload':
+    {
+        'desc': 'Hints how much buffering the media resource will likely need',
+        'elements':
+        {
+            'audio',
+            'video'
+        },
+        'value_keywords':
+        {
+            'auto',
+            'metadata',
+            'none'
+        },
+        'value_type': '"none"; "metadata"; "auto"'
+    },
+    'readonly':
+    {
+        'desc': 'Whether to allow the value to be edited by the user',
+        'elements':
+        {
+            'input',
+            'textarea'
+        },
+        'value_keywords': {},
+        'value_type': 'Boolean attribute'
+    },
+    'referrerpolicy':
+    {
+        'desc': 'Referrer policy for fetches initiated by the element',
+        'elements':
+        {
+            'a',
+            'area',
+            'iframe',
+            'img',
+            'link',
+            'script'
+        },
+        'value_keywords': {},
+        'value_type': 'Referrer policy'
+    },
+    'rel':
+    {
+        'desc': 'Relationship between the document containing the hyperlink and the destination resource',
+        'elements': {'link'},
+        'value_keywords': {},
+        'value_type': 'Unordered set of unique space-separated tokens. The actual rules are more complicated than indicated.'
+    },
+    'required':
+    {
+        'desc': 'Whether the control is required for form submission',
+        'elements':
+        {
+            'input',
+            'select',
+            'textarea'
+        },
+        'value_keywords': {},
+        'value_type': 'Boolean attribute'
+    },
+    'reversed':
+    {
+        'desc': 'Number the list backwards',
+        'elements': {'ol'},
+        'value_keywords': {},
+        'value_type': 'Boolean attribute'
+    },
+    'rows':
+    {
+        'desc': 'Number of lines to show',
+        'elements': {'textarea'},
+        'value_keywords': {},
+        'value_type': 'Valid non-negative integer greater than zero'
+    },
+    'rowspan':
+    {
+        'desc': 'Number of rows that the cell is to span',
+        'elements':
+        {
+            'td',
+            'th'
+        },
+        'value_keywords': {},
+        'value_type': 'Valid non-negative integer'
+    },
+    'sandbox':
+    {
+        'desc': 'Security rules for nested content',
+        'elements': {'iframe'},
+        'value_keywords': {},
+        'value_type': 'Unordered set of unique space-separated tokens, ASCII case-insensitive, consisting of "allow-forms", "allow-modals", "allow-orientation-lock", "allow-pointer-lock", "allow-popups", "allow-popups-to-escape-sandbox", "allow-presentation", "allow-same-origin", "allow-scripts" and "allow-top-navigation"'
+    },
+    'scope':
+    {
+        'desc': 'Specifies which cells the header cell applies to',
+        'elements': {'th'},
+        'value_keywords':
+        {
+            'col',
+            'colgroup',
+            'row',
+            'rowgroup'
+        },
+        'value_type': '"row"; "col"; "rowgroup"; "colgroup"'
+    },
+    'selected':
+    {
+        'desc': 'Whether the option is selected by default',
+        'elements': {'option'},
+        'value_keywords': {},
+        'value_type': 'Boolean attribute'
+    },
+    'shape':
+    {
+        'desc': 'The kind of shape to be created in an image map',
+        'elements': {'area'},
+        'value_keywords':
+        {
+            'circle',
+            'default',
+            'poly',
+            'rect'
+        },
+        'value_type': '"circle"; "default"; "poly"; "rect"'
+    },
+    'size':
+    {
+        'desc': 'Size of the control',
+        'elements':
+        {
+            'input',
+            'select'
+        },
+        'value_keywords': {},
+        'value_type': 'Valid non-negative integer greater than zero'
+    },
+    'sizes':
+    {
+        'desc': 'Image sizes for different page layouts',
+        'elements':
+        {
+            'img',
+            'source'
+        },
+        'value_keywords': {},
+        'value_type': 'Valid source size list'
+    },
+    'slot':
+    {
+        'desc': "The element's desired slot",
+        'elements': {'HTML'},
+        'value_keywords': {},
+        'value_type': 'Text'
+    },
+    'span':
+    {
+        'desc': 'Number of columns spanned by the element',
+        'elements':
+        {
+            'col',
+            'colgroup'
+        },
+        'value_keywords': {},
+        'value_type': 'Valid non-negative integer greater than zero'
+    },
+    'spellcheck':
+    {
+        'desc': 'Whether the element is to have its spelling and grammar checked',
+        'elements': {'HTML'},
+        'value_keywords':
+        {
+            'false',
+            'true'
+        },
+        'value_type': '"true"; "false"'
+    },
+    'src':
+    {
+        'desc': 'Address of the resource',
+        'elements':
+        {
+            'audio',
+            'embed',
+            'iframe',
+            'img',
+            'input',
+            'script',
+            'source',
+            'track',
+            'video'
+        },
+        'value_keywords': {},
+        'value_type': 'Valid non-empty URL potentially surrounded by spaces'
+    },
+    'srcdoc':
+    {
+        'desc': 'A document to render in the iframe',
+        'elements': {'iframe'},
+        'value_keywords': {},
+        'value_type': 'The source of an iframe srcdoc document. The actual rules are more complicated than indicated.'
+    },
+    'srclang':
+    {
+        'desc': 'Language of the text track',
+        'elements': {'track'},
+        'value_keywords': {},
+        'value_type': 'Valid BCP 47 language tag'
+    },
+    'srcset':
+    {
+        'desc': 'Images to use in different situations (e.g., high-resolution displays, small monitors, etc.)',
+        'elements':
+        {
+            'img',
+            'source'
+        },
+        'value_keywords': {},
+        'value_type': 'Comma-separated list of image candidate strings'
+    },
+    'start':
+    {
+        'desc': 'Starting value of the list',
+        'elements': {'ol'},
+        'value_keywords': {},
+        'value_type': 'Valid integer'
+    },
+    'step':
+    {
+        'desc': "Granularity to be matched by the form control's value",
+        'elements': {'input'},
+        'value_keywords': {},
+        'value_type': 'Valid floating-point number greater than zero, or "any"'
+    },
+    'style':
+    {
+        'desc': 'Presentational and formatting instructions',
+        'elements': {'HTML'},
+        'value_keywords': {},
+        'value_type': 'CSS declarations. The actual rules are more complicated than indicated.'
+    },
+    'tabindex':
+    {
+        'desc': 'Whether the element is focusable, and the relative order of the element for the purposes of sequential focus navigation',
+        'elements': {'HTML'},
+        'value_keywords': {},
+        'value_type': 'Valid integer'
+    },
+    'target':
+    {
+        'desc': 'Browsing context for form submission',
+        'elements': {'form'},
+        'value_keywords': {},
+        'value_type': 'Valid browsing context name or keyword'
+    },
+    'title':
+    {
+        'desc': 'CSS style sheet set name',
+        'elements':
+        {
+            'link',
+            'style'
+        },
+        'value_keywords': {},
+        'value_type': 'Text'
+    },
+    'translate':
+    {
+        'desc': 'Whether the element is to be translated when the page is localized',
+        'elements': {'HTML'},
+        'value_keywords':
+        {
+            'no',
+            'yes'
+        },
+        'value_type': '"yes"; "no"'
+    },
+    'type':
+    {
+        'desc': 'Type of script',
+        'elements': {'script'},
+        'value_keywords': {},
+        'value_type': '"module"; a valid MIME type string that is not a JavaScript MIME type essence match'
+    },
+    'typemustmatch':
+    {
+        'desc': 'Whether the type attribute and the Content-Type value need to match for the resource to be used',
+        'elements': {'object'},
+        'value_keywords': {},
+        'value_type': 'Boolean attribute'
+    },
+    'usemap':
+    {
+        'desc': 'Name of image map to use',
+        'elements':
+        {
+            'img',
+            'object'
+        },
+        'value_keywords': {},
+        'value_type': 'Valid hash-name reference. The actual rules are more complicated than indicated.'
+    },
+    'value':
+    {
+        'desc': 'Value of parameter',
+        'elements': {'param'},
+        'value_keywords': {},
+        'value_type': 'Text'
+    },
+    'width':
+    {
+        'desc': 'Horizontal dimension',
+        'elements':
+        {
+            'canvas',
+            'embed',
+            'iframe',
+            'img',
+            'input',
+            'object',
+            'video'
+        },
+        'value_keywords': {},
+        'value_type': 'Valid non-negative integer'
+    },
+    'wrap':
+    {
+        'desc': 'How the value of the form control is to be wrapped for form submission',
+        'elements': {'textarea'},
+        'value_keywords':
+        {
+            'hard',
+            'soft'
+        },
+        'value_type': '"soft"; "hard"'
+    }
+}

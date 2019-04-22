@@ -1,0 +1,443 @@
+{
+    'Autocapitalize-inheriting elements':
+    {
+        'elements':
+        {
+            'button',
+            'fieldset',
+            'input',
+            'output',
+            'select',
+            'textarea'
+        },
+        'elements_maybe': [],
+        'exceptions': ''
+    },
+    'Embedded content':
+    {
+        'elements':
+        {
+            'audio',
+            'canvas',
+            'embed',
+            'iframe',
+            'img',
+            'math',
+            'object',
+            'picture',
+            'svg',
+            'video'
+        },
+        'elements_maybe': [],
+        'exceptions': ''
+    },
+    'Flow content':
+    {
+        'elements':
+        {
+            'Text',
+            'a',
+            'abbr',
+            'address',
+            'article',
+            'aside',
+            'audio',
+            'b',
+            'bdi',
+            'bdo',
+            'blockquote',
+            'br',
+            'button',
+            'canvas',
+            'cite',
+            'code',
+            'data',
+            'datalist',
+            'del',
+            'details',
+            'dfn',
+            'dialog',
+            'div',
+            'dl',
+            'em',
+            'embed',
+            'fieldset',
+            'figure',
+            'footer',
+            'form',
+            'h1',
+            'h2',
+            'h3',
+            'h4',
+            'h5',
+            'h6',
+            'header',
+            'hgroup',
+            'hr',
+            'i',
+            'iframe',
+            'img',
+            'input',
+            'ins',
+            'kbd',
+            'label',
+            'map',
+            'mark',
+            'math',
+            'menu',
+            'meter',
+            'nav',
+            'noscript',
+            'object',
+            'ol',
+            'output',
+            'p',
+            'picture',
+            'pre',
+            'progress',
+            'q',
+            'ruby',
+            's',
+            'samp',
+            'script',
+            'section',
+            'select',
+            'slot',
+            'small',
+            'span',
+            'strong',
+            'sub',
+            'sup',
+            'svg',
+            'table',
+            'template',
+            'textarea',
+            'time',
+            'u',
+            'ul',
+            'var',
+            'video',
+            'wbr'
+        },
+        'elements_maybe':
+        [
+            'area',
+            'link',
+            'main',
+            'meta'
+        ],
+        'exceptions': 'area (if it is a descendant of a map element); link (if it is allowed in the body); main (if it is a hierarchically correct main element); meta (if the itemprop attribute is present)'
+    },
+    'Form-associated elements':
+    {
+        'elements':
+        {
+            'button',
+            'fieldset',
+            'img',
+            'input',
+            'label',
+            'object',
+            'output',
+            'select',
+            'textarea'
+        },
+        'elements_maybe': [],
+        'exceptions': ''
+    },
+    'Heading content':
+    {
+        'elements':
+        {
+            'h1',
+            'h2',
+            'h3',
+            'h4',
+            'h5',
+            'h6',
+            'hgroup'
+        },
+        'elements_maybe': [],
+        'exceptions': ''
+    },
+    'Interactive content':
+    {
+        'elements':
+        {
+            'button',
+            'details',
+            'embed',
+            'iframe',
+            'label',
+            'select',
+            'textarea'
+        },
+        'elements_maybe':
+        [
+            'a',
+            'audio',
+            'img',
+            'input',
+            'object',
+            'video'
+        ],
+        'exceptions': 'a (if the href attribute is present); audio (if the controls attribute is present); img (if the usemap attribute is present); input (if the type attribute is not in the Hidden state); object (if the usemap attribute is present); video (if the controls attribute is present); The tabindex attribute can also make any element into interactive content.'
+    },
+    'Labelable elements':
+    {
+        'elements':
+        {
+            'button',
+            'input',
+            'meter',
+            'output',
+            'progress',
+            'select',
+            'textarea'
+        },
+        'elements_maybe': [],
+        'exceptions': ''
+    },
+    'Listed elements':
+    {
+        'elements':
+        {
+            'button',
+            'fieldset',
+            'input',
+            'object',
+            'output',
+            'select',
+            'textarea'
+        },
+        'elements_maybe': [],
+        'exceptions': ''
+    },
+    'Metadata content':
+    {
+        'elements':
+        {
+            'base',
+            'link',
+            'meta',
+            'noscript',
+            'script',
+            'style',
+            'template',
+            'title'
+        },
+        'elements_maybe': [],
+        'exceptions': ''
+    },
+    'Palpable content':
+    {
+        'elements':
+        {
+            'a',
+            'abbr',
+            'address',
+            'article',
+            'aside',
+            'b',
+            'bdi',
+            'bdo',
+            'blockquote',
+            'button',
+            'canvas',
+            'cite',
+            'code',
+            'data',
+            'details',
+            'dfn',
+            'div',
+            'em',
+            'embed',
+            'fieldset',
+            'figure',
+            'footer',
+            'form',
+            'h1',
+            'h2',
+            'h3',
+            'h4',
+            'h5',
+            'h6',
+            'header',
+            'hgroup',
+            'i',
+            'iframe',
+            'img',
+            'ins',
+            'kbd',
+            'label',
+            'main',
+            'map',
+            'mark',
+            'math',
+            'meter',
+            'nav',
+            'object',
+            'output',
+            'p',
+            'pre',
+            'progress',
+            'q',
+            'ruby',
+            's',
+            'samp',
+            'section',
+            'select',
+            'small',
+            'span',
+            'strong',
+            'sub',
+            'sup',
+            'svg',
+            'table',
+            'textarea',
+            'time',
+            'u',
+            'var',
+            'video'
+        },
+        'elements_maybe':
+        [
+            'audio',
+            'dl',
+            'input',
+            'menu',
+            'ol',
+            'ul'
+        ],
+        'exceptions': "audio (if the controls attribute is present); dl (if the element's children include at least one name-value group); input (if the type attribute is not in the Hidden state); menu (if the element's children include at least one li element); ol (if the element's children include at least one li element); ul (if the element's children include at least one li element); Text that is not inter-element whitespace"
+    },
+    'Phrasing content':
+    {
+        'elements':
+        {
+            'Text',
+            'a',
+            'abbr',
+            'audio',
+            'b',
+            'bdi',
+            'bdo',
+            'br',
+            'button',
+            'canvas',
+            'cite',
+            'code',
+            'data',
+            'datalist',
+            'del',
+            'dfn',
+            'em',
+            'embed',
+            'i',
+            'iframe',
+            'img',
+            'input',
+            'ins',
+            'kbd',
+            'label',
+            'map',
+            'mark',
+            'math',
+            'meter',
+            'noscript',
+            'object',
+            'output',
+            'picture',
+            'progress',
+            'q',
+            'ruby',
+            's',
+            'samp',
+            'script',
+            'select',
+            'slot',
+            'small',
+            'span',
+            'strong',
+            'sub',
+            'sup',
+            'svg',
+            'template',
+            'textarea',
+            'time',
+            'u',
+            'var',
+            'video',
+            'wbr'
+        },
+        'elements_maybe':
+        [
+            'area',
+            'link',
+            'meta'
+        ],
+        'exceptions': 'area (if it is a descendant of a  map element); link (if it is allowed in the body); meta (if the itemprop attribute is present)'
+    },
+    'Resettable elements':
+    {
+        'elements':
+        {
+            'input',
+            'output',
+            'select',
+            'textarea'
+        },
+        'elements_maybe': [],
+        'exceptions': ''
+    },
+    'Script-supporting elements':
+    {
+        'elements':
+        {
+            'script',
+            'template'
+        },
+        'elements_maybe': [],
+        'exceptions': ''
+    },
+    'Sectioning content':
+    {
+        'elements':
+        {
+            'article',
+            'aside',
+            'nav',
+            'section'
+        },
+        'elements_maybe': [],
+        'exceptions': ''
+    },
+    'Sectioning roots':
+    {
+        'elements':
+        {
+            'blockquote',
+            'body',
+            'details',
+            'dialog',
+            'fieldset',
+            'figure',
+            'td'
+        },
+        'elements_maybe': [],
+        'exceptions': ''
+    },
+    'Submittable elements':
+    {
+        'elements':
+        {
+            'button',
+            'input',
+            'object',
+            'select',
+            'textarea'
+        },
+        'elements_maybe': [],
+        'exceptions': ''
+    }
+}

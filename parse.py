@@ -1,13 +1,22 @@
+from util import *
+from fmt import *
+
 from bs4 import BeautifulSoup
-import itertools
 import re
-import types
 
 
-pattern_keywords = re.compile(r'"[a-zA-Z0-9-]+"(; "[a-zA-Z0-9-]+")*')
+# Match a list of one-or-more keywords such as the string `"foo"; "bar";`
+# Each keyword is alpha-numeric and may (rarely) contain a hyphen.
+KEYWORDS_PATTERN = re.compile(r'"[a-zA-Z0-9-]+"(; "[a-zA-Z0-9-]+")*')
 
-# https://html.spec.whatwg.org/multipage/dom.html#global-attributes
-global_attributes = [
+# Match a element exceptions such as the string "element (if ...)'
+EXCEPTION_PATTERN = re.compile(r'([a-zA-Z0-9-]+) \(if [a-zA-Z0-9\' -]+\)')
+
+
+# Global attributes common to all elements
+# source: https://html.spec.whatwg.org/multipage/dom.html#global-attributes
+global_attributes = \
+[
     "accesskey",
     "autocapitalize",
     "contenteditable",
@@ -30,24 +39,6 @@ global_attributes = [
     "title",
     "translate",
 ]
-
-
-def pairwise(iterable):
-    "s -> (s0,s1), (s1,s2), (s2, s3), ..., (sLast, None)"
-    a, b = itertools.tee(iterable)
-    next(b, None)
-    return itertools.zip_longest(a, b, fillvalue=None)
-
-def dict_lastitems(xs):
-    "xs -> (k0, v0, False), (k1, v1, False), ..., (kLast, vLast, True)"
-    keys = pairwise(xs.keys())
-    for key, key2 in keys:
-        yield key, xs[key], key2 is None
-
-def list_lastitems(xs):
-    "xs -> (x0, False), (x1, False), ..., (xLast, True)"
-    for x, y in pairwise(xs):
-        yield x, y is None
 
 
 def gen_elements(element):
@@ -86,15 +77,16 @@ def gen_attributes(attributes):
 def gen_categories(categories):
     for category in categories.split(";"):
         category = category.strip().strip("*")
+        if category == "empty":
+            continue
         yield category
 
 
 def gen_keywords(keywords):
-    # "foo"; "bar"
-    # KEYWORD: alphanumeric
-    # "KEYWORD" [; "KEYWORD" [; ...]]
-    if pattern_keywords.fullmatch(keywords):
-        yield from map(lambda x: x.strip("\"").strip(), keywords.split(";"))
+    """Given a `keywords` string such as `"foo"; "bar"`, yield each keyword.
+    Otherwise, yield nothing."""
+    if KEYWORDS_PATTERN.fullmatch(keywords):
+        yield from map(lambda x: x.strip().strip("\""), keywords.split(";"))
 
 
 def parse_index_elements(soup):
@@ -135,8 +127,10 @@ def parse_index_categories(soup):
 
         elements = set(gen_elements(elements))
 
+        if exceptions == "—":
+            exceptions = ""
+
         yield category, elements, exceptions
-            
 
 
 def parse_index_attributes(soup):
@@ -182,6 +176,19 @@ def parse_input_type_keywords(soup):
         yield keyword.strip()
 
 
+def parse_element_exceptions_string(xs):
+    # e.g. "element (if ...); ...' -> [element, ...]
+    if ";" in xs:
+        xs = xs.split(";")
+    else:
+        xs = [xs]
+
+    for x in xs:
+        x = x.strip()
+        matches = EXCEPTION_PATTERN.fullmatch(x)
+        if matches:
+            yield matches.group(1)
+
 
 def element_wrapper(element_name):
     """NOTE: Not injection safe"""
@@ -190,92 +197,56 @@ def element_wrapper(element_name):
     return f
 
 
-with open("indices.html") as fp:
-    soup = BeautifulSoup(fp, "lxml")
+with open("src/indices.html") as fp:
+    g_soup = BeautifulSoup(fp, "lxml")
 
 
-elements = parse_index_elements(soup)
-categories = parse_index_categories(soup)
-attributes = parse_index_attributes(soup) # excl. event handlers
-event_handlers = parse_index_event_handlers(soup)
+g_elements = parse_index_elements(g_soup)
+g_categories = parse_index_categories(g_soup)
+g_attributes = parse_index_attributes(g_soup) # excl. event handlers
+g_event_handlers = parse_index_event_handlers(g_soup)
 
 
-with open("input.html") as fp:
-    soup = BeautifulSoup(fp, "lxml")
+with open("src/input.html") as fp:
+    g_soup = BeautifulSoup(fp, "lxml")
 
 
-input_type_keywords = set(parse_input_type_keywords(soup))
+g_input_type_keywords = set(parse_input_type_keywords(g_soup))
 
 
+g_elements = dictify_tuples(g_elements, lambda i: (i[0], {
+    "desc": i[1],
+    "categories": i[2],
+    "attributes": i[3],
+    "children": i[4],
+}))
 
-def is_simple_list(xs):
-    return all([isinstance(v, str) for x in xs])
+g_categories = dictify_tuples(g_categories, lambda i: (i[0], {
+    "elements": i[1],
+    "exceptions": i[2],
+    "elements_maybe": parse_element_exceptions_string(i[2]),
+}))
 
-def pformat_list(xs, indent=0):
-    t = "    "*indent
+g_attributes = dictify_tuples(g_attributes, lambda i: (i[0], {
+    "elements": i[1],
+    "desc": i[2],
+    "value_type": i[3],
+    "value_keywords": i[4],
+}))
 
-    yield t + "[\n"
-    for value, last in list_lastitems(sorted(xs)):
-        yield from pformat(value, indent+1)
-        if not last: yield ","
-        yield "\n"
-    yield t + "]"
-
-def pformat_dict(xs, indent=0):
-    t = "    "*indent
-
-    yield t + "{\n"
-    for key, last in list_lastitems(sorted(xs.keys())):
-        value = xs[key]
-        yield t + "    %s:" % repr(key)
-        if isinstance(value, str):
-            yield " "
-            yield repr(value)
-        else:
-            yield "\n"
-            yield from pformat(value, indent+1)
-        if not last: yield ","
-        yield "\n"
-    yield t + "}"
+g_event_handlers = dictify_tuples(g_event_handlers, lambda i: (i[0], {
+    "applies_to": i[1],
+}))
 
 
-def pformat(xs, indent=0):
-    if isinstance(xs, types.GeneratorType):
-        yield from pformat(list(xs), indent)
-    elif isinstance(xs, str):
-        yield "    "*indent + repr(xs)
-    elif isinstance(xs, dict):
-        yield from pformat_dict(xs, indent)
-    elif isinstance(xs, list):
-        yield from pformat_list(xs, indent)
-    elif isinstance(xs, set):
-        yield from pformat_list(xs, indent)
-    else:
-        yield "    "*indent + str(type(xs)) + ":" + repr(xs)
+with open("bin/elements.json", "wb") as fp:
+    fp.write("".join(pformat(g_elements)).encode("utf-8"))
 
+with open("bin/categories.json", "wb") as fp:
+    fp.write("".join(pformat(g_categories)).encode("utf-8"))
 
-def map_from_list_of_tuples(xs, kvfn):
-    result = {}
-    for x in xs:
-        key, value = kvfn(x)
-        result[key] = value
-    return result
+with open("bin/attributes.json", "wb") as fp:
+    fp.write("".join(pformat(g_attributes)).encode("utf-8"))
 
-
-#for i in elements: print(i)
-#for i in categories: print(i)
-#for i in attributes: print(i)
-#for i in event_handlers: print(i)
-#for i in input_type_keywords: print(i)
-
-r = {
-    "elements": elements,
-    "categories": categories,
-    "attributes": attributes,
-    "event_handlers": map_from_list_of_tuples(event_handlers, lambda i: (i[0], {'applies_to': i[1]})),
-    "input_element_type_attribute_values": input_type_keywords,
-}
-
-print("".join(pformat(r)))
-
-
+with open("bin/event_handlers.json", "wb") as fp:
+    fp.write("".join(pformat(g_event_handlers)).encode("utf-8"))

@@ -1,0 +1,330 @@
+{
+    'onabort':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'onafterprint':
+    {
+        'applies_to': 'body'
+    },
+    'onauxclick':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'onbeforeprint':
+    {
+        'applies_to': 'body'
+    },
+    'onbeforeunload':
+    {
+        'applies_to': 'body'
+    },
+    'onblur':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'oncancel':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'oncanplay':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'oncanplaythrough':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'onchange':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'onclick':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'onclose':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'oncontextmenu':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'oncopy':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'oncuechange':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'oncut':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'ondblclick':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'ondrag':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'ondragend':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'ondragenter':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'ondragexit':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'ondragleave':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'ondragover':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'ondragstart':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'ondrop':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'ondurationchange':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'onemptied':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'onended':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'onerror':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'onfocus':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'onformdata':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'onhashchange':
+    {
+        'applies_to': 'body'
+    },
+    'oninput':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'oninvalid':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'onkeydown':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'onkeypress':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'onkeyup':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'onlanguagechange':
+    {
+        'applies_to': 'body'
+    },
+    'onload':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'onloadeddata':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'onloadedmetadata':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'onloadend':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'onloadstart':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'onmessage':
+    {
+        'applies_to': 'body'
+    },
+    'onmessageerror':
+    {
+        'applies_to': 'body'
+    },
+    'onmousedown':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'onmouseenter':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'onmouseleave':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'onmousemove':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'onmouseout':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'onmouseover':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'onmouseup':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'onoffline':
+    {
+        'applies_to': 'body'
+    },
+    'ononline':
+    {
+        'applies_to': 'body'
+    },
+    'onpagehide':
+    {
+        'applies_to': 'body'
+    },
+    'onpageshow':
+    {
+        'applies_to': 'body'
+    },
+    'onpaste':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'onpause':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'onplay':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'onplaying':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'onpopstate':
+    {
+        'applies_to': 'body'
+    },
+    'onprogress':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'onratechange':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'onrejectionhandled':
+    {
+        'applies_to': 'body'
+    },
+    'onreset':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'onresize':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'onscroll':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'onsecuritypolicyviolation':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'onseeked':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'onseeking':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'onselect':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'onstalled':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'onstorage':
+    {
+        'applies_to': 'body'
+    },
+    'onsubmit':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'onsuspend':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'ontimeupdate':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'ontoggle':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'onunhandledrejection':
+    {
+        'applies_to': 'body'
+    },
+    'onunload':
+    {
+        'applies_to': 'body'
+    },
+    'onvolumechange':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'onwaiting':
+    {
+        'applies_to': 'HTML elements'
+    },
+    'onwheel':
+    {
+        'applies_to': 'HTML elements'
+    }
+}

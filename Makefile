@@ -1,20 +1,12 @@
 .PHONY: default
 default: all ;
 
+src:
+    make -C src
 
-indices.html:
-	wget -O indices.html https://html.spec.whatwg.org/multipage/indices.html
+parse: src
+    python3 parse.py
+    # generates bin/*.json
 
-dom.html:
-	wget -O dom.html https://html.spec.whatwg.org/multipage/dom.html
-
-input.html:
-	wget -O input.html https://html.spec.whatwg.org/multipage/input.html
-
-spec: indices.html dom.html input.html
-
-index.py: parse.py spec
-	python3 parse.py > index.py
-
-all: index.py
+all: parse
 
