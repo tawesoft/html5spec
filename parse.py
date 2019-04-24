@@ -1,6 +1,7 @@
 from util import *
 from fmt import *
 
+from collections import namedtuple
 from bs4 import BeautifulSoup
 import re
 
@@ -39,6 +40,12 @@ global_attributes = \
     "title",
     "translate",
 ]
+
+
+t_element       = namedtuple("Element",       ["name", "desc", "categories", "attributes", "children"])
+t_category      = namedtuple("Category",      ["name", "elements", "elements_maybe", "exceptions"])
+t_attribute     = namedtuple("Attributes",    ["name", "elements", "desc", "value_type", "value_keywords"])
+t_event_handler = namedtuple("EventHandlers", ["name", "applies_to"])
 
 
 def gen_elements(element):
@@ -106,7 +113,7 @@ def parse_index_elements(soup):
         children = set(gen_categories(children))
 
         for i in sorted(elements):
-            yield i, desc.strip(), categories, attributes, children
+            yield t_element(i, desc.strip(), categories, attributes, children)
 
 
 def parse_index_categories(soup):
@@ -130,7 +137,9 @@ def parse_index_categories(soup):
         if exceptions == "—":
             exceptions = ""
 
-        yield category, elements, exceptions
+        elements_maybe = parse_element_exceptions_string(exceptions)
+
+        yield t_category(category, elements, elements_maybe, exceptions)
 
 
 def parse_index_attributes(soup):
@@ -149,7 +158,7 @@ def parse_index_attributes(soup):
         value_keywords = set(gen_keywords(value_desc))
 
         elements = set(map(lambda x: x.strip(";\n "), gen_elements(elements)))
-        yield attribute.strip(), elements, desc.strip(), value_desc, value_keywords
+        yield t_attribute(attribute.strip(), elements, desc.strip(), value_desc, value_keywords)
 
 
 def parse_index_event_handlers(soup):
@@ -162,7 +171,7 @@ def parse_index_event_handlers(soup):
 
         attribute, elements, _, _ = cells
 
-        yield attribute.strip(), elements.strip()
+        yield t_event_handler(attribute.strip(), elements.strip())
 
 
 def parse_input_type_keywords(soup):
@@ -178,6 +187,8 @@ def parse_input_type_keywords(soup):
 
 def parse_element_exceptions_string(xs):
     # e.g. "element (if ...); ...' -> [element, ...]
+    if not xs: return
+
     if ";" in xs:
         xs = xs.split(";")
     else:
@@ -203,40 +214,18 @@ with open("src/indices.html") as fp:
 
 g_elements = parse_index_elements(g_soup)
 g_categories = parse_index_categories(g_soup)
-g_attributes = parse_index_attributes(g_soup) # excl. event handlers
-g_event_handlers = parse_index_event_handlers(g_soup)
-
+g_attributes = list(parse_index_attributes(g_soup)) # excl. event handlers
+g_event_handlers = list(parse_index_event_handlers(g_soup))
 
 with open("src/input.html") as fp:
     g_soup = BeautifulSoup(fp, "lxml")
 
+g_attributes.append(t_attribute("type", set(["input"]), "Type of form control", "e.g. \"text\"", parse_input_type_keywords(g_soup)))
 
-g_input_type_keywords = set(parse_input_type_keywords(g_soup))
-
-
-g_elements = dictify_tuples(g_elements, lambda i: (i[0], {
-    "desc": i[1],
-    "categories": i[2],
-    "attributes": i[3],
-    "children": i[4],
-}))
-
-g_categories = dictify_tuples(g_categories, lambda i: (i[0], {
-    "elements": i[1],
-    "exceptions": i[2],
-    "elements_maybe": parse_element_exceptions_string(i[2]),
-}))
-
-g_attributes = dictify_tuples(g_attributes, lambda i: (i[0], {
-    "elements": i[1],
-    "desc": i[2],
-    "value_type": i[3],
-    "value_keywords": i[4],
-}))
-
-g_event_handlers = dictify_tuples(g_event_handlers, lambda i: (i[0], {
-    "applies_to": i[1],
-}))
+g_elements = dictify_namedtuples(g_elements)
+g_categories = dictify_namedtuples(g_categories)
+g_attributes = dictify_namedtuples(g_attributes)
+g_event_handlers = dictify_namedtuples(g_event_handlers)
 
 
 with open("bin/elements.json", "wb") as fp:
@@ -250,3 +239,4 @@ with open("bin/attributes.json", "wb") as fp:
 
 with open("bin/event_handlers.json", "wb") as fp:
     fp.write("".join(pformat(g_event_handlers)).encode("utf-8"))
+

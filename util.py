@@ -1,4 +1,6 @@
 import itertools
+from collections import namedtuple
+from typing import List
 
 
 def pairwise(iterable):
@@ -27,9 +29,19 @@ def list_lastitems(xs):
         yield x, y is None
 
 
-def dictify_tuples(xs, kvfn):
+def dictify_namedtuples(xs: List[namedtuple]):
     result = {}
+
     for x in xs:
-        key, value = kvfn(x)
-        result[key] = value
+        key = x[0]
+        keyname = x._fields[0]
+        r = {}
+
+        for k, v in sorted(x._asdict().items()):
+            if keyname == k:
+                continue
+            r[k] = v
+
+        result[key] = r
+
     return result

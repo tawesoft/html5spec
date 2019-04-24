@@ -1119,10 +1119,34 @@
     },
     "type":
     {
-        "desc": "Type of script",
-        "elements": ['script'],
-        "value_keywords": [],
-        "value_type": "\"module\"; a valid MIME type string that is not a JavaScript MIME type essence match"
+        "desc": "Type of form control",
+        "elements": ['input'],
+        "value_keywords":
+        [
+            "button",
+            "checkbox",
+            "color",
+            "date",
+            "datetime-local",
+            "email",
+            "file",
+            "hidden",
+            "image",
+            "month",
+            "number",
+            "password",
+            "radio",
+            "range",
+            "reset",
+            "search",
+            "submit",
+            "tel",
+            "text",
+            "time",
+            "url",
+            "week"
+        ],
+        "value_type": "e.g. \"text\""
     },
     "typemustmatch":
     {
