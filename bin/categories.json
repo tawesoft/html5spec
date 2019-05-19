@@ -133,6 +133,7 @@
         "elements":
         [
             "button",
+            "custom",
             "fieldset",
             "img",
             "input",
@@ -188,6 +189,7 @@
         "elements":
         [
             "button",
+            "custom",
             "input",
             "meter",
             "output",
@@ -203,6 +205,7 @@
         "elements":
         [
             "button",
+            "custom",
             "fieldset",
             "input",
             "object",
@@ -382,6 +385,7 @@
     {
         "elements":
         [
+            "custom",
             "input",
             "output",
             "select",
@@ -432,6 +436,7 @@
         "elements":
         [
             "button",
+            "custom",
             "input",
             "object",
             "select",

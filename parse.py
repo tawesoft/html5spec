@@ -3,7 +3,10 @@ from fmt import *
 
 from collections import namedtuple
 from bs4 import BeautifulSoup
+from pathlib import Path
 import re
+
+specdir = Path("spec")
 
 
 # Match a list of one-or-more keywords such as the string `"foo"; "bar";`
@@ -154,7 +157,7 @@ def parse_index_attributes(soup):
         value_desc = " ".join([x.strip().strip("*") for x in value.split("\n")])
         value_desc = value_desc.strip()
         if value.strip().endswith("*"):
-            value_desc += ". The actual rules are more complicated than indicated."
+            value_desc += ". The actual rules are more complicated than indicated"
         value_keywords = set(gen_keywords(value_desc))
 
         elements = set(map(lambda x: x.strip(";\n "), gen_elements(elements)))
@@ -208,7 +211,7 @@ def element_wrapper(element_name):
     return f
 
 
-with open("src/indices.html") as fp:
+with (specdir / "indices.html").open("r") as fp:
     g_soup = BeautifulSoup(fp, "lxml")
 
 
@@ -217,13 +220,17 @@ g_categories = parse_index_categories(g_soup)
 g_attributes = list(parse_index_attributes(g_soup)) # excl. event handlers
 g_event_handlers = list(parse_index_event_handlers(g_soup))
 
-with open("src/input.html") as fp:
+with (specdir / "input.html").open("r") as fp:
     g_soup = BeautifulSoup(fp, "lxml")
 
-g_attributes.append(t_attribute("type", set(["input"]), "Type of form control", "e.g. \"text\"", parse_input_type_keywords(g_soup)))
+g_attributes.append(t_attribute("type", set(["input"]),
+    "Type of form control", "e.g. \"text\"", parse_input_type_keywords(g_soup)))
 
 g_elements = dictify_namedtuples(g_elements)
 g_categories = dictify_namedtuples(g_categories)
+for i in g_attributes:
+    if i[0] == "autocomplete":
+        print(i)
 g_attributes = dictify_namedtuples(g_attributes)
 g_event_handlers = dictify_namedtuples(g_event_handlers)
 

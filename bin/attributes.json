@@ -4,14 +4,14 @@
         "desc": "Alternative label to use for the header cell when referencing the cell in other contexts",
         "elements": ['th'],
         "value_keywords": [],
-        "value_type": "Text. The actual rules are more complicated than indicated."
+        "value_type": "Text. The actual rules are more complicated than indicated"
     },
     "accept":
     {
         "desc": "Hint for expected file type in file upload controls",
         "elements": ['input'],
         "value_keywords": [],
-        "value_type": "Set of comma-separated tokens* consisting of valid MIME type strings with no parameters or audio/*, video/*, or image/. The actual rules are more complicated than indicated."
+        "value_type": "Set of comma-separated tokens* consisting of valid MIME type strings with no parameters or audio/*, video/*, or image/. The actual rules are more complicated than indicated"
     },
     "accept-charset":
     {
@@ -65,7 +65,7 @@
             "input"
         ],
         "value_keywords": [],
-        "value_type": "Text. The actual rules are more complicated than indicated."
+        "value_type": "Text. The actual rules are more complicated than indicated"
     },
     "as":
     {
@@ -98,15 +98,20 @@
     },
     "autocomplete":
     {
-        "desc": "Hint for form autofill feature",
+        "desc": "Default setting for autofill feature for controls in the form. Hint for form autofill feature",
         "elements":
         [
+            "form",
             "input",
             "select",
             "textarea"
         ],
-        "value_keywords": [],
-        "value_type": "Autofill field name and related tokens. The actual rules are more complicated than indicated."
+        "value_keywords":
+        [
+            "off",
+            "on"
+        ],
+        "value_type": "\"on\"; \"off\". Autofill field name and related tokens. The actual rules are more complicated than indicated"
     },
     "autofocus":
     {
@@ -196,7 +201,7 @@
         "desc": "Value of the element",
         "elements": ['meta'],
         "value_keywords": [],
-        "value_type": "Text. The actual rules are more complicated than indicated."
+        "value_type": "Text. The actual rules are more complicated than indicated"
     },
     "contenteditable":
     {
@@ -225,7 +230,7 @@
         "desc": "Coordinates for the shape to be created in an image map",
         "elements": ['area'],
         "value_keywords": [],
-        "value_type": "Valid list of floating-point numbers. The actual rules are more complicated than indicated."
+        "value_type": "Valid list of floating-point numbers. The actual rules are more complicated than indicated"
     },
     "crossorigin":
     {
@@ -254,10 +259,15 @@
     },
     "datetime":
     {
-        "desc": "Machine-readable value",
-        "elements": ['time'],
+        "desc": "Date and (optionally) time of the change. Machine-readable value",
+        "elements":
+        [
+            "del",
+            "ins",
+            "time"
+        ],
         "value_keywords": [],
-        "value_type": "Valid month string, valid date string, valid yearless date string, valid time string, valid local date and time string, valid time-zone offset string, valid global date and time string, valid week string, valid non-negative integer, or valid duration string"
+        "value_type": "Valid date string with optional time. Valid month string, valid date string, valid yearless date string, valid time string, valid local date and time string, valid time-zone offset string, valid global date and time string, valid week string, valid non-negative integer, or valid duration string"
     },
     "decoding":
     {
@@ -287,14 +297,19 @@
     },
     "dir":
     {
-        "desc": "The text directionality of the element",
-        "elements": ['bdo'],
+        "desc": "The text directionality of the element. The text directionality of the element",
+        "elements":
+        [
+            "HTML",
+            "bdo"
+        ],
         "value_keywords":
         [
+            "auto",
             "ltr",
             "rtl"
         ],
-        "value_type": "\"ltr\"; \"rtl\""
+        "value_type": "\"ltr\"; \"rtl\"; \"auto\". \"ltr\"; \"rtl\""
     },
     "dirname":
     {
@@ -305,14 +320,24 @@
             "textarea"
         ],
         "value_keywords": [],
-        "value_type": "Text. The actual rules are more complicated than indicated."
+        "value_type": "Text. The actual rules are more complicated than indicated"
     },
     "disabled":
     {
-        "desc": "Whether the descendant form controls, except any inside legend, are disabled",
-        "elements": ['fieldset'],
+        "desc": "Whether the form control is disabled. Trigger \"formDisabledCallback\" reaction, and\n          disable form submission for the element's data.. Whether the descendant form controls, except any inside legend, are disabled",
+        "elements":
+        [
+            "button",
+            "fieldset",
+            "form-associated",
+            "input",
+            "optgroup",
+            "option",
+            "select",
+            "textarea"
+        ],
         "value_keywords": [],
-        "value_type": "Boolean attribute"
+        "value_type": "Boolean attribute. Boolean attribute. Boolean attribute"
     },
     "download":
     {
@@ -352,10 +377,14 @@
     },
     "for":
     {
-        "desc": "Specifies controls from which the output was calculated",
-        "elements": ['output'],
+        "desc": "Associate the label with form control. Specifies controls from which the output was calculated",
+        "elements":
+        [
+            "label",
+            "output"
+        ],
         "value_keywords": [],
-        "value_type": "Unordered set of unique space-separated tokens, case-sensitive, consisting of IDs. The actual rules are more complicated than indicated."
+        "value_type": "ID. The actual rules are more complicated than indicated. Unordered set of unique space-separated tokens, case-sensitive, consisting of IDs. The actual rules are more complicated than indicated"
     },
     "form":
     {
@@ -363,6 +392,7 @@
         "elements":
         [
             "button",
+            "custom",
             "fieldset",
             "input",
             "object",
@@ -371,7 +401,7 @@
             "textarea"
         ],
         "value_keywords": [],
-        "value_type": "ID. The actual rules are more complicated than indicated."
+        "value_type": "ID. The actual rules are more complicated than indicated"
     },
     "formaction":
     {
@@ -442,7 +472,7 @@
             "th"
         ],
         "value_keywords": [],
-        "value_type": "Unordered set of unique space-separated tokens, case-sensitive, consisting of IDs. The actual rules are more complicated than indicated."
+        "value_type": "Unordered set of unique space-separated tokens, case-sensitive, consisting of IDs. The actual rules are more complicated than indicated"
     },
     "height":
     {
@@ -472,14 +502,20 @@
         "desc": "Low limit of high range",
         "elements": ['meter'],
         "value_keywords": [],
-        "value_type": "Valid floating-point number. The actual rules are more complicated than indicated."
+        "value_type": "Valid floating-point number. The actual rules are more complicated than indicated"
     },
     "href":
     {
-        "desc": "Document base URL",
-        "elements": ['base'],
+        "desc": "Address of the hyperlink. Address of the hyperlink. Document base URL",
+        "elements":
+        [
+            "a",
+            "area",
+            "base",
+            "link"
+        ],
         "value_keywords": [],
-        "value_type": "Valid URL potentially surrounded by spaces"
+        "value_type": "Valid URL potentially surrounded by spaces. Valid non-empty URL potentially surrounded by spaces. Valid URL potentially surrounded by spaces"
     },
     "hreflang":
     {
@@ -511,7 +547,7 @@
         "desc": "The element's ID",
         "elements": ['HTML'],
         "value_keywords": [],
-        "value_type": "Text. The actual rules are more complicated than indicated."
+        "value_type": "Text. The actual rules are more complicated than indicated"
     },
     "imagesizes":
     {
@@ -581,14 +617,14 @@
         "desc": "Property names of a microdata item",
         "elements": ['HTML'],
         "value_keywords": [],
-        "value_type": "Unordered set of unique space-separated tokens, case-sensitive, consisting of valid absolute URLs, defined property names, or text. The actual rules are more complicated than indicated."
+        "value_type": "Unordered set of unique space-separated tokens, case-sensitive, consisting of valid absolute URLs, defined property names, or text. The actual rules are more complicated than indicated"
     },
     "itemref":
     {
         "desc": "Referenced elements",
         "elements": ['HTML'],
         "value_keywords": [],
-        "value_type": "Unordered set of unique space-separated tokens, case-sensitive, consisting of IDs. The actual rules are more complicated than indicated."
+        "value_type": "Unordered set of unique space-separated tokens, case-sensitive, consisting of IDs. The actual rules are more complicated than indicated"
     },
     "itemscope":
     {
@@ -602,7 +638,7 @@
         "desc": "Item types of a microdata item",
         "elements": ['HTML'],
         "value_keywords": [],
-        "value_type": "Unordered set of unique space-separated tokens, case-sensitive, consisting of valid absolute URL. The actual rules are more complicated than indicated."
+        "value_type": "Unordered set of unique space-separated tokens, case-sensitive, consisting of valid absolute URL. The actual rules are more complicated than indicated"
     },
     "kind":
     {
@@ -642,7 +678,7 @@
         "desc": "List of autocomplete options",
         "elements": ['input'],
         "value_keywords": [],
-        "value_type": "ID. The actual rules are more complicated than indicated."
+        "value_type": "ID. The actual rules are more complicated than indicated"
     },
     "loop":
     {
@@ -660,7 +696,7 @@
         "desc": "High limit of low range",
         "elements": ['meter'],
         "value_keywords": [],
-        "value_type": "Valid floating-point number. The actual rules are more complicated than indicated."
+        "value_type": "Valid floating-point number. The actual rules are more complicated than indicated"
     },
     "manifest":
     {
@@ -671,14 +707,15 @@
     },
     "max":
     {
-        "desc": "Upper bound of range",
+        "desc": "Maximum value. Upper bound of range",
         "elements":
         [
+            "input",
             "meter",
             "progress"
         ],
         "value_keywords": [],
-        "value_type": "Valid floating-point number. The actual rules are more complicated than indicated."
+        "value_type": "Varies. The actual rules are more complicated than indicated. Valid floating-point number. The actual rules are more complicated than indicated"
     },
     "maxlength":
     {
@@ -717,10 +754,14 @@
     },
     "min":
     {
-        "desc": "Lower bound of range",
-        "elements": ['meter'],
+        "desc": "Minimum value. Lower bound of range",
+        "elements":
+        [
+            "input",
+            "meter"
+        ],
         "value_keywords": [],
-        "value_type": "Valid floating-point number. The actual rules are more complicated than indicated."
+        "value_type": "Varies. The actual rules are more complicated than indicated. Valid floating-point number. The actual rules are more complicated than indicated"
     },
     "minlength":
     {
@@ -757,10 +798,26 @@
     },
     "name":
     {
-        "desc": "Name of shadow tree slot",
-        "elements": ['slot'],
+        "desc": "Name of the element to use for form submission and in the form.elements API. Name of form to use in the document.forms API. Name of nested browsing context. Name of image map to reference from the usemap attribute. Metadata name. Name of parameter. Name of shadow tree slot",
+        "elements":
+        [
+            "button",
+            "custom",
+            "fieldset",
+            "form",
+            "iframe",
+            "input",
+            "map",
+            "meta",
+            "object",
+            "output",
+            "param",
+            "select",
+            "slot",
+            "textarea"
+        ],
         "value_keywords": [],
-        "value_type": "Text"
+        "value_type": "Text. The actual rules are more complicated than indicated. Text. The actual rules are more complicated than indicated. Valid browsing context name or keyword. Text. The actual rules are more complicated than indicated. Text. The actual rules are more complicated than indicated. Text. Text"
     },
     "nomodule":
     {
@@ -785,17 +842,21 @@
     },
     "open":
     {
-        "desc": "Whether the dialog box is showing",
-        "elements": ['dialog'],
+        "desc": "Whether the details are visible. Whether the dialog box is showing",
+        "elements":
+        [
+            "details",
+            "dialog"
+        ],
         "value_keywords": [],
-        "value_type": "Boolean attribute"
+        "value_type": "Boolean attribute. Boolean attribute"
     },
     "optimum":
     {
         "desc": "Optimum value in gauge",
         "elements": ['meter'],
         "value_keywords": [],
-        "value_type": "Valid floating-point number. The actual rules are more complicated than indicated."
+        "value_type": "Valid floating-point number. The actual rules are more complicated than indicated"
     },
     "pattern":
     {
@@ -824,7 +885,7 @@
             "textarea"
         ],
         "value_keywords": [],
-        "value_type": "Text. The actual rules are more complicated than indicated."
+        "value_type": "Text. The actual rules are more complicated than indicated"
     },
     "playsinline":
     {
@@ -858,14 +919,15 @@
     },
     "readonly":
     {
-        "desc": "Whether to allow the value to be edited by the user",
+        "desc": "Whether to allow the value to be edited by the user. Affects willValidate",
         "elements":
         [
+            "form-associated",
             "input",
             "textarea"
         ],
         "value_keywords": [],
-        "value_type": "Boolean attribute"
+        "value_type": "Boolean attribute. Boolean attribute"
     },
     "referrerpolicy":
     {
@@ -884,10 +946,15 @@
     },
     "rel":
     {
-        "desc": "Relationship between the document containing the hyperlink and the destination resource",
-        "elements": ['link'],
+        "desc": "Relationship between the location in the document containing the hyperlink and the destination resource. Relationship between the document containing the hyperlink and the destination resource",
+        "elements":
+        [
+            "a",
+            "area",
+            "link"
+        ],
         "value_keywords": [],
-        "value_type": "Unordered set of unique space-separated tokens. The actual rules are more complicated than indicated."
+        "value_type": "Unordered set of unique space-separated tokens. The actual rules are more complicated than indicated. Unordered set of unique space-separated tokens. The actual rules are more complicated than indicated"
     },
     "required":
     {
@@ -979,14 +1046,15 @@
     },
     "sizes":
     {
-        "desc": "Image sizes for different page layouts",
+        "desc": "Sizes of the icons (for rel=\"icon\"). Image sizes for different page layouts",
         "elements":
         [
             "img",
+            "link",
             "source"
         ],
         "value_keywords": [],
-        "value_type": "Valid source size list"
+        "value_type": "Unordered set of unique space-separated tokens, ASCII case-insensitive, consisting of sizes. The actual rules are more complicated than indicated. Valid source size list"
     },
     "slot":
     {
@@ -1040,7 +1108,7 @@
         "desc": "A document to render in the iframe",
         "elements": ['iframe'],
         "value_keywords": [],
-        "value_type": "The source of an iframe srcdoc document. The actual rules are more complicated than indicated."
+        "value_type": "The source of an iframe srcdoc document. The actual rules are more complicated than indicated"
     },
     "srclang":
     {
@@ -1079,7 +1147,7 @@
         "desc": "Presentational and formatting instructions",
         "elements": ['HTML'],
         "value_keywords": [],
-        "value_type": "CSS declarations. The actual rules are more complicated than indicated."
+        "value_type": "CSS declarations. The actual rules are more complicated than indicated"
     },
     "tabindex":
     {
@@ -1090,21 +1158,31 @@
     },
     "target":
     {
-        "desc": "Browsing context for form submission",
-        "elements": ['form'],
+        "desc": "Browsing context for hyperlink navigation. Default browsing context for hyperlink navigation and form submission. Browsing context for form submission",
+        "elements":
+        [
+            "a",
+            "area",
+            "base",
+            "form"
+        ],
         "value_keywords": [],
-        "value_type": "Valid browsing context name or keyword"
+        "value_type": "Valid browsing context name or keyword. Valid browsing context name or keyword. Valid browsing context name or keyword"
     },
     "title":
     {
-        "desc": "CSS style sheet set name",
+        "desc": "Advisory information for the element. Full term or expansion of abbreviation. Description of pattern (when used with pattern attribute). Title of the link. CSS style sheet set name",
         "elements":
         [
+            "HTML",
+            "abbr",
+            "dfn",
+            "input",
             "link",
             "style"
         ],
         "value_keywords": [],
-        "value_type": "Text"
+        "value_type": "Text. Text. Text. Text. Text"
     },
     "translate":
     {
@@ -1119,10 +1197,25 @@
     },
     "type":
     {
-        "desc": "Type of form control",
-        "elements": ['input'],
+        "desc": "Hint for the type of the referenced resource. Type of button. Type of embedded resource. Type of form control. Kind of list marker. Type of script. Type of form control",
+        "elements":
+        [
+            "a",
+            "button",
+            "embed",
+            "input",
+            "link",
+            "object",
+            "ol",
+            "script",
+            "source"
+        ],
         "value_keywords":
         [
+            "1",
+            "A",
+            "I",
+            "a",
             "button",
             "checkbox",
             "color",
@@ -1131,6 +1224,7 @@
             "email",
             "file",
             "hidden",
+            "i",
             "image",
             "month",
             "number",
@@ -1146,14 +1240,7 @@
             "url",
             "week"
         ],
-        "value_type": "e.g. \"text\""
-    },
-    "typemustmatch":
-    {
-        "desc": "Whether the type attribute and the Content-Type value need to match for the resource to be used",
-        "elements": ['object'],
-        "value_keywords": [],
-        "value_type": "Boolean attribute"
+        "value_type": "Valid MIME type string. \"submit\"; \"reset\"; \"button\". Valid MIME type string. input type keyword. \"1\"; \"a\"; \"A\"; \"i\"; \"I\". \"module\"; a valid MIME type string that is not a JavaScript MIME type essence match. e.g. \"text\""
     },
     "usemap":
     {
@@ -1164,14 +1251,24 @@
             "object"
         ],
         "value_keywords": [],
-        "value_type": "Valid hash-name reference. The actual rules are more complicated than indicated."
+        "value_type": "Valid hash-name reference. The actual rules are more complicated than indicated"
     },
     "value":
     {
-        "desc": "Value of parameter",
-        "elements": ['param'],
+        "desc": "Value to be used for form submission. Machine-readable value. Value of the form control. Ordinal value of the list item. Current value of the element. Value of parameter",
+        "elements":
+        [
+            "button",
+            "data",
+            "input",
+            "li",
+            "meter",
+            "option",
+            "param",
+            "progress"
+        ],
         "value_keywords": [],
-        "value_type": "Text"
+        "value_type": "Text. Text. The actual rules are more complicated than indicated. Varies. The actual rules are more complicated than indicated. Valid integer. Valid floating-point number. Text"
     },
     "width":
     {

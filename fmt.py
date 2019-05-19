@@ -1,3 +1,7 @@
+"""
+Pretty-prints basic types as a subset of (Python, JSON) syntax
+"""
+
 from util import *
 import types
 import json

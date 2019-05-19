@@ -1,12 +1,16 @@
-.PHONY: default
+.PHONY: default clean
 default: all ;
 
-src:
-    make -C src
+clean:
+	make -C spec clean
+	rm bin/*.json
 
-parse: src
-    python3 parse.py
-    # generates bin/*.json
+_spec:
+	make -C spec
 
-all: parse
+parse: _spec
+	python3 parse.py
+	# generates bin/*.json
+
+all: _spec parse
 

@@ -30,6 +30,9 @@ def list_lastitems(xs):
 
 
 def dictify_namedtuples(xs: List[namedtuple]):
+    """Convert a list of named tuples do a dict where the key is the first
+    item in each tuple and each tuple has a unique key."""
+
     result = {}
 
     for x in xs:
@@ -42,6 +45,22 @@ def dictify_namedtuples(xs: List[namedtuple]):
                 continue
             r[k] = v
 
-        result[key] = r
+        if key in result:
+            # "Key %s already present - merge"
+            t = result[key]
+            for subkey in t.keys():
+                if isinstance(t[subkey], str):
+                    t[subkey] += ". " + r[subkey]
+                elif isinstance(t[subkey], set):
+                    t[subkey] = t[subkey].union(r[subkey])
+                elif isinstance(t[subkey], list):
+                    t[subkey].extend(r[subkey])
+                else:
+                    raise NotImplemented
+        else:
+            result[key] = r
 
     return result
+
+
+
