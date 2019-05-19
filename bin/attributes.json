@@ -94,7 +94,7 @@
             "sentences",
             "words"
         ],
-        "value_type": "\"on\"; \"off\"; \"none\"; \"sentences\"; \"words\"; \"characters\""
+        "value_type": "Keywords"
     },
     "autocomplete":
     {
@@ -111,7 +111,7 @@
             "off",
             "on"
         ],
-        "value_type": "\"on\"; \"off\". Autofill field name and related tokens. The actual rules are more complicated than indicated"
+        "value_type": "Keywords. Autofill field name and related tokens. The actual rules are more complicated than indicated"
     },
     "autofocus":
     {
@@ -142,7 +142,7 @@
         "desc": "Character encoding declaration",
         "elements": ['meta'],
         "value_keywords": ['utf-8'],
-        "value_type": "\"utf-8\""
+        "value_type": "Keywords"
     },
     "checked":
     {
@@ -212,7 +212,7 @@
             "false",
             "true"
         ],
-        "value_type": "\"true\"; \"false\""
+        "value_type": "Keywords"
     },
     "controls":
     {
@@ -248,7 +248,7 @@
             "anonymous",
             "use-credentials"
         ],
-        "value_type": "\"anonymous\"; \"use-credentials\""
+        "value_type": "Keywords"
     },
     "data":
     {
@@ -279,7 +279,7 @@
             "auto",
             "sync"
         ],
-        "value_type": "\"sync\"; \"async\"; \"auto\""
+        "value_type": "Keywords"
     },
     "default":
     {
@@ -309,7 +309,7 @@
             "ltr",
             "rtl"
         ],
-        "value_type": "\"ltr\"; \"rtl\"; \"auto\". \"ltr\"; \"rtl\""
+        "value_type": "Keywords. Keywords"
     },
     "dirname":
     {
@@ -359,14 +359,19 @@
             "false",
             "true"
         ],
-        "value_type": "\"true\"; \"false\""
+        "value_type": "Keywords"
     },
     "enctype":
     {
         "desc": "Entry list encoding type to use for form submission",
         "elements": ['form'],
-        "value_keywords": [],
-        "value_type": "\"application/x-www-form-urlencoded\"; \"multipart/form-data\"; \"text/plain\""
+        "value_keywords":
+        [
+            "application/x-www-form-urlencoded",
+            "multipart/form-data",
+            "text/plain"
+        ],
+        "value_type": "Keywords"
     },
     "enterkeyhint":
     {
@@ -422,8 +427,13 @@
             "button",
             "input"
         ],
-        "value_keywords": [],
-        "value_type": "\"application/x-www-form-urlencoded\"; \"multipart/form-data\"; \"text/plain\""
+        "value_keywords":
+        [
+            "application/x-www-form-urlencoded",
+            "multipart/form-data",
+            "text/plain"
+        ],
+        "value_type": "Keywords"
     },
     "formmethod":
     {
@@ -439,7 +449,7 @@
             "POST",
             "dialog"
         ],
-        "value_type": "\"GET\"; \"POST\"; \"dialog\""
+        "value_type": "Keywords"
     },
     "formnovalidate":
     {
@@ -540,7 +550,7 @@
             "refresh",
             "x-ua-compatible"
         ],
-        "value_type": "\"content-type\"; \"default-style\"; \"refresh\"; \"x-ua-compatible\"; \"content-security-policy\""
+        "value_type": "Keywords"
     },
     "id":
     {
@@ -578,7 +588,7 @@
             "text",
             "url"
         ],
-        "value_type": "\"none\"; \"text\"; \"tel\"; \"email\"; \"url\"; \"numeric\"; \"decimal\"; \"search\""
+        "value_type": "Keywords"
     },
     "integrity":
     {
@@ -652,7 +662,7 @@
             "metadata",
             "subtitles"
         ],
-        "value_type": "\"subtitles\"; \"captions\"; \"descriptions\"; \"chapters\"; \"metadata\""
+        "value_type": "Keywords"
     },
     "label":
     {
@@ -750,7 +760,7 @@
             "POST",
             "dialog"
         ],
-        "value_type": "\"GET\"; \"POST\"; \"dialog\""
+        "value_type": "Keywords"
     },
     "min":
     {
@@ -915,7 +925,7 @@
             "metadata",
             "none"
         ],
-        "value_type": "\"none\"; \"metadata\"; \"auto\""
+        "value_type": "Keywords"
     },
     "readonly":
     {
@@ -975,6 +985,77 @@
         "value_keywords": [],
         "value_type": "Boolean attribute"
     },
+    "role":
+    {
+        "desc": "ARIA semantic role",
+        "elements": ['HTML'],
+        "value_keywords":
+        [
+            "alert",
+            "alertdialog",
+            "application",
+            "article",
+            "banner",
+            "blockquote",
+            "caption",
+            "cell",
+            "columnheader",
+            "command",
+            "complementary",
+            "composite",
+            "contentinfo",
+            "definition",
+            "deletion",
+            "dialog",
+            "directory",
+            "document",
+            "emphasis",
+            "feed",
+            "figure",
+            "form",
+            "gridcell",
+            "group",
+            "heading",
+            "img",
+            "input",
+            "insertion",
+            "label",
+            "legend",
+            "list",
+            "listitem",
+            "log",
+            "main",
+            "marquee",
+            "math",
+            "navigation",
+            "none",
+            "note",
+            "paragraph",
+            "presentation",
+            "progressbar",
+            "region",
+            "row",
+            "row",
+            "rowgroup",
+            "rowheader",
+            "scrollbar",
+            "search",
+            "separator",
+            "separator",
+            "status",
+            "strong",
+            "subscript",
+            "superscript",
+            "tab",
+            "table",
+            "term",
+            "time",
+            "timer",
+            "toolbar",
+            "tooltip"
+        ],
+        "value_type": "A concrete ARIA role"
+    },
     "rows":
     {
         "desc": "Number of lines to show",
@@ -1011,7 +1092,7 @@
             "row",
             "rowgroup"
         ],
-        "value_type": "\"row\"; \"col\"; \"rowgroup\"; \"colgroup\""
+        "value_type": "Keywords"
     },
     "selected":
     {
@@ -1031,7 +1112,7 @@
             "poly",
             "rect"
         ],
-        "value_type": "\"circle\"; \"default\"; \"poly\"; \"rect\""
+        "value_type": "Keywords"
     },
     "size":
     {
@@ -1083,7 +1164,7 @@
             "false",
             "true"
         ],
-        "value_type": "\"true\"; \"false\""
+        "value_type": "Keywords"
     },
     "src":
     {
@@ -1193,7 +1274,7 @@
             "no",
             "yes"
         ],
-        "value_type": "\"yes\"; \"no\""
+        "value_type": "Keywords"
     },
     "type":
     {
@@ -1240,7 +1321,7 @@
             "url",
             "week"
         ],
-        "value_type": "Valid MIME type string. \"submit\"; \"reset\"; \"button\". Valid MIME type string. input type keyword. \"1\"; \"a\"; \"A\"; \"i\"; \"I\". \"module\"; a valid MIME type string that is not a JavaScript MIME type essence match. e.g. \"text\""
+        "value_type": "Valid MIME type string. Keywords. Valid MIME type string. input type keyword. Keywords. \"module\"; a valid MIME type string that is not a JavaScript MIME type essence match. An input type e.g. \"text\""
     },
     "usemap":
     {
@@ -1295,6 +1376,6 @@
             "hard",
             "soft"
         ],
-        "value_type": "\"soft\"; \"hard\""
+        "value_type": "Keywords"
     }
 }

@@ -11,23 +11,26 @@ specdir = Path("spec")
 
 # Match a list of one-or-more keywords such as the string `"foo"; "bar";`
 # Each keyword is alpha-numeric and may (rarely) contain a hyphen.
-KEYWORDS_PATTERN = re.compile(r'"[a-zA-Z0-9-]+"(; "[a-zA-Z0-9-]+")*')
+KEYWORDS_PATTERN = re.compile(r'"[a-zA-Z0-9/-]+"(; "[a-zA-Z0-9/-]+")*')
 
 # Match a element exceptions such as the string "element (if ...)'
 EXCEPTION_PATTERN = re.compile(r'([a-zA-Z0-9-]+) \(if [a-zA-Z0-9\' -]+\)')
 
 
-# Global attributes common to all elements
+# Global attributes common to all HTML elements
 # source: https://html.spec.whatwg.org/multipage/dom.html#global-attributes
+# plus class, id, slot, role (ARIA)
 global_attributes = \
 [
     "accesskey",
     "autocapitalize",
+    "class",
     "contenteditable",
     "dir",
     "draggable",
     "enterkeyhint",
     "hidden",
+    "id",
     "inputmode",
     "is",
     "itemid",
@@ -37,6 +40,8 @@ global_attributes = \
     "itemtype",
     "lang",
     "nonce",
+    "role", # ARIA
+    "slot",
     "spellcheck",
     "style",
     "tabindex",
@@ -159,6 +164,8 @@ def parse_index_attributes(soup):
         if value.strip().endswith("*"):
             value_desc += ". The actual rules are more complicated than indicated"
         value_keywords = set(gen_keywords(value_desc))
+        if value_keywords:
+            value_desc = "Keywords"
 
         elements = set(map(lambda x: x.strip(";\n "), gen_elements(elements)))
         yield t_attribute(attribute.strip(), elements, desc.strip(), value_desc, value_keywords)
@@ -186,6 +193,23 @@ def parse_input_type_keywords(soup):
         keyword, *_ = cells
 
         yield keyword.strip()
+
+
+def parse_aria_roles(soup):
+    concrete_roles = set([
+        "widget",
+        "document_structure_roles",
+        "landmark_roles",
+        "live_region_roles",
+        "window_roles"
+    ])
+
+    for role in concrete_roles:
+        rows = soup.find("section", {"id": role}).findNext("ul").find_all("li")
+
+        for row in rows:
+            keyword = row.find("code").get_text()
+            yield keyword.strip()
 
 
 def parse_element_exceptions_string(xs):
@@ -224,13 +248,18 @@ with (specdir / "input.html").open("r") as fp:
     g_soup = BeautifulSoup(fp, "lxml")
 
 g_attributes.append(t_attribute("type", set(["input"]),
-    "Type of form control", "e.g. \"text\"", parse_input_type_keywords(g_soup)))
+    "Type of form control", "An input type e.g. \"text\"", parse_input_type_keywords(g_soup)))
+
+
+with (specdir / "aria.html").open("r") as fp:
+    g_soup = BeautifulSoup(fp, "lxml")
+
+g_attributes.append(t_attribute("role", set(["HTML"]),
+    "ARIA semantic role", "A concrete ARIA role", parse_aria_roles(g_soup)))
+
 
 g_elements = dictify_namedtuples(g_elements)
 g_categories = dictify_namedtuples(g_categories)
-for i in g_attributes:
-    if i[0] == "autocomplete":
-        print(i)
 g_attributes = dictify_namedtuples(g_attributes)
 g_event_handlers = dictify_namedtuples(g_event_handlers)
 

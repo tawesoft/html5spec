@@ -3,7 +3,7 @@ default: all ;
 
 clean:
 	make -C spec clean
-	rm bin/*.json
+	rm -f bin/*.json
 
 _spec:
 	make -C spec
