@@ -2,15 +2,15 @@
 default: all ;
 
 clean:
-	make -C spec clean
+	make -C contrib clean
 	rm -f bin/*.json
 
-_spec:
-	make -C spec
+_contrib:
+	make -C contrib
 
-parse: _spec
+json: _contrib
 	python3 parse.py
-	# generates bin/*.json
+	# generates `spec-json/*.json`, etc.
 
-all: _spec parse
+all: _contrib json
 

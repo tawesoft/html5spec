@@ -98,20 +98,27 @@
     },
     "autocomplete":
     {
-        "desc": "Default setting for autofill feature for controls in the form. Hint for form autofill feature",
-        "elements":
-        [
-            "form",
-            "input",
-            "select",
-            "textarea"
-        ],
+        "desc": "Default setting for autofill feature for controls in the form",
+        "elements": ["form"],
+        "next": "autocomplete(2)",
         "value_keywords":
         [
             "off",
             "on"
         ],
-        "value_type": "Keywords. Autofill field name and related tokens. The actual rules are more complicated than indicated"
+        "value_type": "Keywords"
+    },
+    "autocomplete(2)":
+    {
+        "desc": "Hint for form autofill feature",
+        "elements":
+        [
+            "input",
+            "select",
+            "textarea"
+        ],
+        "value_keywords": [],
+        "value_type": "Autofill field name and related tokens. The actual rules are more complicated than indicated"
     },
     "autofocus":
     {
@@ -259,15 +266,22 @@
     },
     "datetime":
     {
-        "desc": "Date and (optionally) time of the change. Machine-readable value",
+        "desc": "Date and (optionally) time of the change",
         "elements":
         [
             "del",
-            "ins",
-            "time"
+            "ins"
         ],
+        "next": "datetime(2)",
         "value_keywords": [],
-        "value_type": "Valid date string with optional time. Valid month string, valid date string, valid yearless date string, valid time string, valid local date and time string, valid time-zone offset string, valid global date and time string, valid week string, valid non-negative integer, or valid duration string"
+        "value_type": "Valid date string with optional time"
+    },
+    "datetime(2)":
+    {
+        "desc": "Machine-readable value",
+        "elements": ["time"],
+        "value_keywords": [],
+        "value_type": "Valid month string, valid date string, valid yearless date string, valid time string, valid local date and time string, valid time-zone offset string, valid global date and time string, valid week string, valid non-negative integer, or valid duration string"
     },
     "decoding":
     {
@@ -297,19 +311,27 @@
     },
     "dir":
     {
-        "desc": "The text directionality of the element. The text directionality of the element",
-        "elements":
-        [
-            "HTML",
-            "bdo"
-        ],
+        "desc": "The text directionality of the element",
+        "elements": ["HTML"],
+        "next": "dir(2)",
         "value_keywords":
         [
             "auto",
             "ltr",
             "rtl"
         ],
-        "value_type": "Keywords. Keywords"
+        "value_type": "Keywords"
+    },
+    "dir(2)":
+    {
+        "desc": "The text directionality of the element",
+        "elements": ["bdo"],
+        "value_keywords":
+        [
+            "ltr",
+            "rtl"
+        ],
+        "value_type": "Keywords"
     },
     "dirname":
     {
@@ -324,20 +346,34 @@
     },
     "disabled":
     {
-        "desc": "Whether the form control is disabled. Trigger \"formDisabledCallback\" reaction, and\n          disable form submission for the element's data.. Whether the descendant form controls, except any inside legend, are disabled",
+        "desc": "Whether the form control is disabled",
         "elements":
         [
             "button",
-            "fieldset",
-            "form-associated",
             "input",
             "optgroup",
             "option",
             "select",
             "textarea"
         ],
+        "next": "disabled(2)",
         "value_keywords": [],
-        "value_type": "Boolean attribute. Boolean attribute. Boolean attribute"
+        "value_type": "Boolean attribute"
+    },
+    "disabled(2)":
+    {
+        "desc": "Trigger \"formDisabledCallback\" reaction, and\n          disable form submission for the element's data.",
+        "elements": ["form-associated"],
+        "next": "disabled(3)",
+        "value_keywords": [],
+        "value_type": "Boolean attribute"
+    },
+    "disabled(3)":
+    {
+        "desc": "Whether the descendant form controls, except any inside legend, are disabled",
+        "elements": ["fieldset"],
+        "value_keywords": [],
+        "value_type": "Boolean attribute"
     },
     "download":
     {
@@ -382,14 +418,18 @@
     },
     "for":
     {
-        "desc": "Associate the label with form control. Specifies controls from which the output was calculated",
-        "elements":
-        [
-            "label",
-            "output"
-        ],
+        "desc": "Associate the label with form control",
+        "elements": ["label"],
+        "next": "for(2)",
         "value_keywords": [],
-        "value_type": "ID. The actual rules are more complicated than indicated. Unordered set of unique space-separated tokens, case-sensitive, consisting of IDs. The actual rules are more complicated than indicated"
+        "value_type": "ID. The actual rules are more complicated than indicated"
+    },
+    "for(2)":
+    {
+        "desc": "Specifies controls from which the output was calculated",
+        "elements": ["output"],
+        "value_keywords": [],
+        "value_type": "Unordered set of unique space-separated tokens, case-sensitive, consisting of IDs. The actual rules are more complicated than indicated"
     },
     "form":
     {
@@ -516,16 +556,30 @@
     },
     "href":
     {
-        "desc": "Address of the hyperlink. Address of the hyperlink. Document base URL",
+        "desc": "Address of the hyperlink",
         "elements":
         [
             "a",
-            "area",
-            "base",
-            "link"
+            "area"
         ],
+        "next": "href(2)",
         "value_keywords": [],
-        "value_type": "Valid URL potentially surrounded by spaces. Valid non-empty URL potentially surrounded by spaces. Valid URL potentially surrounded by spaces"
+        "value_type": "Valid URL potentially surrounded by spaces"
+    },
+    "href(2)":
+    {
+        "desc": "Address of the hyperlink",
+        "elements": ["link"],
+        "next": "href(3)",
+        "value_keywords": [],
+        "value_type": "Valid non-empty URL potentially surrounded by spaces"
+    },
+    "href(3)":
+    {
+        "desc": "Document base URL",
+        "elements": ["base"],
+        "value_keywords": [],
+        "value_type": "Valid URL potentially surrounded by spaces"
     },
     "hreflang":
     {
@@ -717,15 +771,22 @@
     },
     "max":
     {
-        "desc": "Maximum value. Upper bound of range",
+        "desc": "Maximum value",
+        "elements": ["input"],
+        "next": "max(2)",
+        "value_keywords": [],
+        "value_type": "Varies. The actual rules are more complicated than indicated"
+    },
+    "max(2)":
+    {
+        "desc": "Upper bound of range",
         "elements":
         [
-            "input",
             "meter",
             "progress"
         ],
         "value_keywords": [],
-        "value_type": "Varies. The actual rules are more complicated than indicated. Valid floating-point number. The actual rules are more complicated than indicated"
+        "value_type": "Valid floating-point number. The actual rules are more complicated than indicated"
     },
     "maxlength":
     {
@@ -764,14 +825,18 @@
     },
     "min":
     {
-        "desc": "Minimum value. Lower bound of range",
-        "elements":
-        [
-            "input",
-            "meter"
-        ],
+        "desc": "Minimum value",
+        "elements": ["input"],
+        "next": "min(2)",
         "value_keywords": [],
-        "value_type": "Varies. The actual rules are more complicated than indicated. Valid floating-point number. The actual rules are more complicated than indicated"
+        "value_type": "Varies. The actual rules are more complicated than indicated"
+    },
+    "min(2)":
+    {
+        "desc": "Lower bound of range",
+        "elements": ["meter"],
+        "value_keywords": [],
+        "value_type": "Valid floating-point number. The actual rules are more complicated than indicated"
     },
     "minlength":
     {
@@ -808,26 +873,71 @@
     },
     "name":
     {
-        "desc": "Name of the element to use for form submission and in the form.elements API. Name of form to use in the document.forms API. Name of nested browsing context. Name of image map to reference from the usemap attribute. Metadata name. Name of parameter. Name of shadow tree slot",
+        "desc": "Name of the element to use for form submission and in the form.elements API",
         "elements":
         [
             "button",
             "custom",
             "fieldset",
-            "form",
-            "iframe",
             "input",
-            "map",
-            "meta",
-            "object",
             "output",
-            "param",
             "select",
-            "slot",
             "textarea"
         ],
+        "next": "name(2)",
         "value_keywords": [],
-        "value_type": "Text. The actual rules are more complicated than indicated. Text. The actual rules are more complicated than indicated. Valid browsing context name or keyword. Text. The actual rules are more complicated than indicated. Text. The actual rules are more complicated than indicated. Text. Text"
+        "value_type": "Text. The actual rules are more complicated than indicated"
+    },
+    "name(2)":
+    {
+        "desc": "Name of form to use in the document.forms API",
+        "elements": ["form"],
+        "next": "name(3)",
+        "value_keywords": [],
+        "value_type": "Text. The actual rules are more complicated than indicated"
+    },
+    "name(3)":
+    {
+        "desc": "Name of nested browsing context",
+        "elements":
+        [
+            "iframe",
+            "object"
+        ],
+        "next": "name(4)",
+        "value_keywords": [],
+        "value_type": "Valid browsing context name or keyword"
+    },
+    "name(4)":
+    {
+        "desc": "Name of image map to reference from the usemap attribute",
+        "elements": ["map"],
+        "next": "name(5)",
+        "value_keywords": [],
+        "value_type": "Text. The actual rules are more complicated than indicated"
+    },
+    "name(5)":
+    {
+        "desc": "Metadata name",
+        "elements": ["meta"],
+        "next": "name(6)",
+        "value_keywords": [],
+        "value_type": "Text. The actual rules are more complicated than indicated"
+    },
+    "name(6)":
+    {
+        "desc": "Name of parameter",
+        "elements": ["param"],
+        "next": "name(7)",
+        "value_keywords": [],
+        "value_type": "Text"
+    },
+    "name(7)":
+    {
+        "desc": "Name of shadow tree slot",
+        "elements": ["slot"],
+        "value_keywords": [],
+        "value_type": "Text"
     },
     "nomodule":
     {
@@ -852,14 +962,18 @@
     },
     "open":
     {
-        "desc": "Whether the details are visible. Whether the dialog box is showing",
-        "elements":
-        [
-            "details",
-            "dialog"
-        ],
+        "desc": "Whether the details are visible",
+        "elements": ["details"],
+        "next": "open(2)",
         "value_keywords": [],
-        "value_type": "Boolean attribute. Boolean attribute"
+        "value_type": "Boolean attribute"
+    },
+    "open(2)":
+    {
+        "desc": "Whether the dialog box is showing",
+        "elements": ["dialog"],
+        "value_keywords": [],
+        "value_type": "Boolean attribute"
     },
     "optimum":
     {
@@ -929,15 +1043,22 @@
     },
     "readonly":
     {
-        "desc": "Whether to allow the value to be edited by the user. Affects willValidate",
+        "desc": "Whether to allow the value to be edited by the user",
         "elements":
         [
-            "form-associated",
             "input",
             "textarea"
         ],
+        "next": "readonly(2)",
         "value_keywords": [],
-        "value_type": "Boolean attribute. Boolean attribute"
+        "value_type": "Boolean attribute"
+    },
+    "readonly(2)":
+    {
+        "desc": "Affects willValidate",
+        "elements": ["form-associated"],
+        "value_keywords": [],
+        "value_type": "Boolean attribute"
     },
     "referrerpolicy":
     {
@@ -956,15 +1077,22 @@
     },
     "rel":
     {
-        "desc": "Relationship between the location in the document containing the hyperlink and the destination resource. Relationship between the document containing the hyperlink and the destination resource",
+        "desc": "Relationship between the location in the document containing the hyperlink and the destination resource",
         "elements":
         [
             "a",
-            "area",
-            "link"
+            "area"
         ],
+        "next": "rel(2)",
         "value_keywords": [],
-        "value_type": "Unordered set of unique space-separated tokens. The actual rules are more complicated than indicated. Unordered set of unique space-separated tokens. The actual rules are more complicated than indicated"
+        "value_type": "Unordered set of unique space-separated tokens. The actual rules are more complicated than indicated"
+    },
+    "rel(2)":
+    {
+        "desc": "Relationship between the document containing the hyperlink and the destination resource",
+        "elements": ["link"],
+        "value_keywords": [],
+        "value_type": "Unordered set of unique space-separated tokens. The actual rules are more complicated than indicated"
     },
     "required":
     {
@@ -1127,15 +1255,22 @@
     },
     "sizes":
     {
-        "desc": "Sizes of the icons (for rel=\"icon\"). Image sizes for different page layouts",
+        "desc": "Sizes of the icons (for rel=\"icon\")",
+        "elements": ["link"],
+        "next": "sizes(2)",
+        "value_keywords": [],
+        "value_type": "Unordered set of unique space-separated tokens, ASCII case-insensitive, consisting of sizes. The actual rules are more complicated than indicated"
+    },
+    "sizes(2)":
+    {
+        "desc": "Image sizes for different page layouts",
         "elements":
         [
             "img",
-            "link",
             "source"
         ],
         "value_keywords": [],
-        "value_type": "Unordered set of unique space-separated tokens, ASCII case-insensitive, consisting of sizes. The actual rules are more complicated than indicated. Valid source size list"
+        "value_type": "Valid source size list"
     },
     "slot":
     {
@@ -1239,31 +1374,77 @@
     },
     "target":
     {
-        "desc": "Browsing context for hyperlink navigation. Default browsing context for hyperlink navigation and form submission. Browsing context for form submission",
+        "desc": "Browsing context for hyperlink navigation",
         "elements":
         [
             "a",
-            "area",
-            "base",
-            "form"
+            "area"
         ],
+        "next": "target(2)",
         "value_keywords": [],
-        "value_type": "Valid browsing context name or keyword. Valid browsing context name or keyword. Valid browsing context name or keyword"
+        "value_type": "Valid browsing context name or keyword"
+    },
+    "target(2)":
+    {
+        "desc": "Default browsing context for hyperlink navigation and form submission",
+        "elements": ["base"],
+        "next": "target(3)",
+        "value_keywords": [],
+        "value_type": "Valid browsing context name or keyword"
+    },
+    "target(3)":
+    {
+        "desc": "Browsing context for form submission",
+        "elements": ["form"],
+        "value_keywords": [],
+        "value_type": "Valid browsing context name or keyword"
     },
     "title":
     {
-        "desc": "Advisory information for the element. Full term or expansion of abbreviation. Description of pattern (when used with pattern attribute). Title of the link. CSS style sheet set name",
+        "desc": "Advisory information for the element",
+        "elements": ["HTML"],
+        "next": "title(2)",
+        "value_keywords": [],
+        "value_type": "Text"
+    },
+    "title(2)":
+    {
+        "desc": "Full term or expansion of abbreviation",
         "elements":
         [
-            "HTML",
             "abbr",
-            "dfn",
-            "input",
+            "dfn"
+        ],
+        "next": "title(3)",
+        "value_keywords": [],
+        "value_type": "Text"
+    },
+    "title(3)":
+    {
+        "desc": "Description of pattern (when used with pattern attribute)",
+        "elements": ["input"],
+        "next": "title(4)",
+        "value_keywords": [],
+        "value_type": "Text"
+    },
+    "title(4)":
+    {
+        "desc": "Title of the link",
+        "elements": ["link"],
+        "next": "title(5)",
+        "value_keywords": [],
+        "value_type": "Text"
+    },
+    "title(5)":
+    {
+        "desc": "CSS style sheet set name",
+        "elements":
+        [
             "link",
             "style"
         ],
         "value_keywords": [],
-        "value_type": "Text. Text. Text. Text. Text"
+        "value_type": "Text"
     },
     "translate":
     {
@@ -1278,25 +1459,79 @@
     },
     "type":
     {
-        "desc": "Hint for the type of the referenced resource. Type of button. Type of embedded resource. Type of form control. Kind of list marker. Type of script. Type of form control",
+        "desc": "Hint for the type of the referenced resource",
         "elements":
         [
             "a",
+            "link"
+        ],
+        "next": "type(2)",
+        "value_keywords": [],
+        "value_type": "Valid MIME type string"
+    },
+    "type(2)":
+    {
+        "desc": "Type of button",
+        "elements": ["button"],
+        "next": "type(3)",
+        "value_keywords":
+        [
             "button",
+            "reset",
+            "submit"
+        ],
+        "value_type": "Keywords"
+    },
+    "type(3)":
+    {
+        "desc": "Type of embedded resource",
+        "elements":
+        [
             "embed",
-            "input",
-            "link",
             "object",
-            "ol",
-            "script",
             "source"
         ],
+        "next": "type(4)",
+        "value_keywords": [],
+        "value_type": "Valid MIME type string"
+    },
+    "type(4)":
+    {
+        "desc": "Type of form control",
+        "elements": ["input"],
+        "next": "type(5)",
+        "value_keywords": [],
+        "value_type": "input type keyword"
+    },
+    "type(5)":
+    {
+        "desc": "Kind of list marker",
+        "elements": ["ol"],
+        "next": "type(6)",
         "value_keywords":
         [
             "1",
             "A",
             "I",
             "a",
+            "i"
+        ],
+        "value_type": "Keywords"
+    },
+    "type(6)":
+    {
+        "desc": "Type of script",
+        "elements": ["script"],
+        "next": "type(7)",
+        "value_keywords": [],
+        "value_type": "\"module\"; a valid MIME type string that is not a JavaScript MIME type essence match"
+    },
+    "type(7)":
+    {
+        "desc": "Type of form control",
+        "elements": ["input"],
+        "value_keywords":
+        [
             "button",
             "checkbox",
             "color",
@@ -1305,7 +1540,6 @@
             "email",
             "file",
             "hidden",
-            "i",
             "image",
             "month",
             "number",
@@ -1321,7 +1555,7 @@
             "url",
             "week"
         ],
-        "value_type": "Valid MIME type string. Keywords. Valid MIME type string. input type keyword. Keywords. \"module\"; a valid MIME type string that is not a JavaScript MIME type essence match. An input type e.g. \"text\""
+        "value_type": "An input type e.g. \"text\""
     },
     "usemap":
     {
@@ -1336,20 +1570,58 @@
     },
     "value":
     {
-        "desc": "Value to be used for form submission. Machine-readable value. Value of the form control. Ordinal value of the list item. Current value of the element. Value of parameter",
+        "desc": "Value to be used for form submission",
         "elements":
         [
             "button",
-            "data",
-            "input",
-            "li",
+            "option"
+        ],
+        "next": "value(2)",
+        "value_keywords": [],
+        "value_type": "Text"
+    },
+    "value(2)":
+    {
+        "desc": "Machine-readable value",
+        "elements": ["data"],
+        "next": "value(3)",
+        "value_keywords": [],
+        "value_type": "Text. The actual rules are more complicated than indicated"
+    },
+    "value(3)":
+    {
+        "desc": "Value of the form control",
+        "elements": ["input"],
+        "next": "value(4)",
+        "value_keywords": [],
+        "value_type": "Varies. The actual rules are more complicated than indicated"
+    },
+    "value(4)":
+    {
+        "desc": "Ordinal value of the list item",
+        "elements": ["li"],
+        "next": "value(5)",
+        "value_keywords": [],
+        "value_type": "Valid integer"
+    },
+    "value(5)":
+    {
+        "desc": "Current value of the element",
+        "elements":
+        [
             "meter",
-            "option",
-            "param",
             "progress"
         ],
+        "next": "value(6)",
         "value_keywords": [],
-        "value_type": "Text. Text. The actual rules are more complicated than indicated. Varies. The actual rules are more complicated than indicated. Valid integer. Valid floating-point number. Text"
+        "value_type": "Valid floating-point number"
+    },
+    "value(6)":
+    {
+        "desc": "Value of parameter",
+        "elements": ["param"],
+        "value_keywords": [],
+        "value_type": "Text"
     },
     "width":
     {

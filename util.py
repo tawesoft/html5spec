@@ -29,7 +29,7 @@ def list_lastitems(xs):
         yield x, y is None
 
 
-def dictify_namedtuples(xs: List[namedtuple]):
+def dictify_namedtuples(xs: List[namedtuple], merge=True):
     """Convert a list of named tuples do a dict where the key is the first
     item in each tuple and each tuple has a unique key."""
 
@@ -46,17 +46,34 @@ def dictify_namedtuples(xs: List[namedtuple]):
             r[k] = v
 
         if key in result:
-            # "Key %s already present - merge"
-            t = result[key]
-            for subkey in t.keys():
-                if isinstance(t[subkey], str):
-                    t[subkey] += ". " + r[subkey]
-                elif isinstance(t[subkey], set):
-                    t[subkey] = t[subkey].union(r[subkey])
-                elif isinstance(t[subkey], list):
-                    t[subkey].extend(r[subkey])
-                else:
-                    raise NotImplemented
+            # Existing entry
+            if merge is None:
+                raise KeyError("Duplicate key %s" % repr(key))
+
+            if merge:
+                # Merge each value with existing entry
+                t = result[key]
+                for subkey in t.keys():
+                    if isinstance(t[subkey], str):
+                        t[subkey] += ". " + r[subkey]
+                    elif isinstance(t[subkey], set):
+                        t[subkey] = t[subkey].union(r[subkey])
+                    elif isinstance(t[subkey], list):
+                        t[subkey].extend(r[subkey])
+                    else:
+                        raise NotImplemented
+            else:
+                # Create a linked-list
+                tail = key
+                count = 2
+                while result[tail].get("next"):
+                    tail = result[tail].get("next")
+                    count += 1
+                newkey = "%s(%d)" % (key, count)
+                result[tail]["next"] = newkey
+                result[newkey] = r
+
+
         else:
             result[key] = r
 

@@ -6,7 +6,8 @@ from bs4 import BeautifulSoup
 from pathlib import Path
 import re
 
-specdir = Path("spec")
+specdir = Path("contrib")
+output_json = Path("spec-json")
 
 
 # Match a list of one-or-more keywords such as the string `"foo"; "bar";`
@@ -260,19 +261,18 @@ g_attributes.append(t_attribute("role", set(["HTML"]),
 
 g_elements = dictify_namedtuples(g_elements)
 g_categories = dictify_namedtuples(g_categories)
-g_attributes = dictify_namedtuples(g_attributes)
+g_attributes = dictify_namedtuples(g_attributes, merge=False)
 g_event_handlers = dictify_namedtuples(g_event_handlers)
 
 
-with open("bin/elements.json", "wb") as fp:
-    fp.write("".join(pformat(g_elements)).encode("utf-8"))
+outputs = [
+    ("elements", g_elements),
+    ("categories", g_categories),
+    ("attributes", g_attributes),
+    ("event_handlers", g_event_handlers)
+]
 
-with open("bin/categories.json", "wb") as fp:
-    fp.write("".join(pformat(g_categories)).encode("utf-8"))
-
-with open("bin/attributes.json", "wb") as fp:
-    fp.write("".join(pformat(g_attributes)).encode("utf-8"))
-
-with open("bin/event_handlers.json", "wb") as fp:
-    fp.write("".join(pformat(g_event_handlers)).encode("utf-8"))
+for k, v in outputs:
+    with (output_json / (k + ".json")).open("wb") as fp:
+        fp.write("".join(pformat(v)).encode("utf-8"))
 
