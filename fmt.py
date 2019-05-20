@@ -15,7 +15,7 @@ def pformat_list(xs, indent=0):
         return
 
     yield t + "[\n"
-    for value, last in list_lastitems(sorted(xs)):
+    for value, last in list_lastitems(xs):
         yield from pformat(value, indent+1)
         if not last: yield ","
         yield "\n"

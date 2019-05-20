@@ -1,4 +1,13 @@
 {
+    "__META__":
+    {
+        "copyright":
+        [
+            "The HTML Living Standard is Copyright \u00a9 2018 WHATWG (Apple, Google, Mozilla, Microsoft) and available under a Creative Commons Attribution 4.0 International License: see `https://whatwg.org/` and `https://creativecommons.org/licenses/by/4.0/`",
+            "Accessible Rich Internet Applications (WAI-ARIA) is Copyright \u00a9 2013-2019 W3C\u00ae (MIT, ERCIM, Keio, Beihang) and available under the W3C Document License: see `https://w3c.github.io/aria/` and `https://www.w3.org/Consortium/Legal/2015/doc-license`",
+            "Based on current published specifications accessed Mon 20 May 15:31:24 UTC 2019"
+        ]
+    },
     "a":
     {
         "attributes":

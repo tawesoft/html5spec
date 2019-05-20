@@ -8,9 +8,10 @@ clean:
 _contrib:
 	make -C contrib
 
-json: _contrib
+json:
 	python3 parse.py
 	# generates `spec-json/*.json`, etc.
+	# run `make -B json` to force this to update
 
 all: _contrib json
 

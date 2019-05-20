@@ -29,11 +29,15 @@ def list_lastitems(xs):
         yield x, y is None
 
 
-def dictify_namedtuples(xs: List[namedtuple], merge=True):
+def dictify_namedtuples(xs: List[namedtuple], merge=True, meta=None):
     """Convert a list of named tuples do a dict where the key is the first
     item in each tuple and each tuple has a unique key."""
 
     result = {}
+
+    if meta:
+        result["__META__"] = meta
+
 
     for x in xs:
         key = x[0]

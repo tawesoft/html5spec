@@ -4,6 +4,7 @@ default: all ;
 specs=indices.html dom.html input.html
 
 clean:
+	rm -f timestamp
 	rm -f $(specs)
 	rm -f aria.html
 
@@ -13,4 +14,7 @@ aria.html:
 %.html:
 	wget -O $@ https://html.spec.whatwg.org/multipage/$@
 
-all: $(specs) aria.html
+timestamp:
+	date -u > timestamp
+
+all: timestamp $(specs) aria.html

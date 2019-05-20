@@ -18,6 +18,15 @@ KEYWORDS_PATTERN = re.compile(r'"[a-zA-Z0-9/-]+"(; "[a-zA-Z0-9/-]+")*')
 EXCEPTION_PATTERN = re.compile(r'([a-zA-Z0-9-]+) \(if [a-zA-Z0-9\' -]+\)')
 
 
+with Path("COPYING.txt").open("r") as fp:
+    COPYING = fp.read().split("\n\n")
+
+with (specdir / "timestamp").open("r") as fp:
+    COPYING.append("Based on current published specifications accessed " + fp.read().strip())
+
+COPYING = [x.replace("\n", " ").strip() for x in COPYING]
+
+
 # Global attributes common to all HTML elements
 # source: https://html.spec.whatwg.org/multipage/dom.html#global-attributes
 # plus class, id, slot, role (ARIA)
@@ -197,13 +206,13 @@ def parse_input_type_keywords(soup):
 
 
 def parse_aria_roles(soup):
-    concrete_roles = set([
+    concrete_roles = {
         "widget",
         "document_structure_roles",
         "landmark_roles",
         "live_region_roles",
-        "window_roles"
-    ])
+        "window_roles",
+    }
 
     for role in concrete_roles:
         rows = soup.find("section", {"id": role}).findNext("ul").find_all("li")
@@ -249,20 +258,24 @@ with (specdir / "input.html").open("r") as fp:
     g_soup = BeautifulSoup(fp, "lxml")
 
 g_attributes.append(t_attribute("type", set(["input"]),
-    "Type of form control", "An input type e.g. \"text\"", parse_input_type_keywords(g_soup)))
+    "Type of form control", "An input type e.g. \"text\"", set(parse_input_type_keywords(g_soup))))
 
 
 with (specdir / "aria.html").open("r") as fp:
     g_soup = BeautifulSoup(fp, "lxml")
 
 g_attributes.append(t_attribute("role", set(["HTML"]),
-    "ARIA semantic role", "A concrete ARIA role", parse_aria_roles(g_soup)))
+    "ARIA semantic role", "A concrete ARIA role", set(parse_aria_roles(g_soup))))
 
 
-g_elements = dictify_namedtuples(g_elements)
-g_categories = dictify_namedtuples(g_categories)
-g_attributes = dictify_namedtuples(g_attributes, merge=False)
-g_event_handlers = dictify_namedtuples(g_event_handlers)
+META={
+    "copyright": COPYING
+}
+
+g_elements = dictify_namedtuples(g_elements, meta=META)
+g_categories = dictify_namedtuples(g_categories, meta=META)
+g_attributes = dictify_namedtuples(g_attributes, merge=False, meta=META)
+g_event_handlers = dictify_namedtuples(g_event_handlers, meta=META)
 
 
 outputs = [

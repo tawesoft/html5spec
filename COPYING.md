@@ -26,12 +26,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
-WHATWG source files and generated JSON output
----------------------------------------------
+Downloaded specs and generated machine-readable output
+------------------------------------------------------
 
-Copyright © 2018 WHATWG (Apple, Google, Mozilla, Microsoft).
-
-This work is licensed under a Creative Commons Attribution 4.0 International
-License: see `LICENSE.txt`
-
-
+See COPYING.txt
