@@ -7,6 +7,15 @@ import types
 import json
 
 
+def keyfn(element):
+    # Always sort keys like "__META__" to the top of a list
+    if element.startswith("__"):
+        return '\0' + element
+    else:
+        return element
+
+
+
 def pformat_list(xs, indent=0):
     t = "    "*indent
 
@@ -36,7 +45,7 @@ def pformat_set(xs, indent=0):
         return
 
     yield t + "[\n"
-    for value, last in list_lastitems(sorted(xs)):
+    for value, last in list_lastitems(sorted(xs, key=keyfn)):
         if isinstance(value, str):
             yield from pformat(value, indent+1)
         if not last: yield ","
@@ -52,7 +61,7 @@ def pformat_dict(xs, indent=0):
         return
 
     yield t + "{\n"
-    for key, last in list_lastitems(sorted(xs.keys())):
+    for key, last in list_lastitems(sorted(xs.keys(), key=keyfn)):
         value = xs[key]
         yield t + "    %s:" % json.dumps(key)
         if isinstance(value, str):
