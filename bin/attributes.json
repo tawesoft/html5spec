@@ -2,56 +2,56 @@
     "abbr":
     {
         "desc": "Alternative label to use for the header cell when referencing the cell in other contexts",
-        "elements": ['th'],
+        "elements": ["th"],
         "value_keywords": [],
         "value_type": "Text. The actual rules are more complicated than indicated"
     },
     "accept":
     {
         "desc": "Hint for expected file type in file upload controls",
-        "elements": ['input'],
+        "elements": ["input"],
         "value_keywords": [],
         "value_type": "Set of comma-separated tokens* consisting of valid MIME type strings with no parameters or audio/*, video/*, or image/. The actual rules are more complicated than indicated"
     },
     "accept-charset":
     {
         "desc": "Character encodings to use for form submission",
-        "elements": ['form'],
+        "elements": ["form"],
         "value_keywords": [],
         "value_type": "ASCII case-insensitive match for \"UTF-8\""
     },
     "accesskey":
     {
         "desc": "Keyboard shortcut to activate or focus element",
-        "elements": ['HTML'],
+        "elements": ["HTML"],
         "value_keywords": [],
         "value_type": "Ordered set of unique space-separated tokens, case-sensitive, consisting of one code point in length"
     },
     "action":
     {
         "desc": "URL to use for form submission",
-        "elements": ['form'],
+        "elements": ["form"],
         "value_keywords": [],
         "value_type": "Valid non-empty URL potentially surrounded by spaces"
     },
     "allow":
     {
         "desc": "Feature policy to be applied to the iframe's contents",
-        "elements": ['iframe'],
+        "elements": ["iframe"],
         "value_keywords": [],
         "value_type": "Serialized feature policy"
     },
     "allowfullscreen":
     {
         "desc": "Whether to allow the iframe's contents to use requestFullscreen()",
-        "elements": ['iframe'],
+        "elements": ["iframe"],
         "value_keywords": [],
         "value_type": "Boolean attribute"
     },
     "allowpaymentrequest":
     {
         "desc": "Whether the iframe's contents are allowed to use the PaymentRequest interface to make payment requests",
-        "elements": ['iframe'],
+        "elements": ["iframe"],
         "value_keywords": [],
         "value_type": "Boolean attribute"
     },
@@ -70,21 +70,21 @@
     "as":
     {
         "desc": "Potential destination for a preload request (for rel=\"preload\" and rel=\"modulepreload\")",
-        "elements": ['link'],
+        "elements": ["link"],
         "value_keywords": [],
         "value_type": "Potential destination, for rel=\"preload\"; script-like destination, for rel=\"modulepreload\""
     },
     "async":
     {
         "desc": "Execute script when available, without blocking while fetching",
-        "elements": ['script'],
+        "elements": ["script"],
         "value_keywords": [],
         "value_type": "Boolean attribute"
     },
     "autocapitalize":
     {
         "desc": "Recommended autocapitalization behavior (for supported input methods)",
-        "elements": ['HTML'],
+        "elements": ["HTML"],
         "value_keywords":
         [
             "characters",
@@ -140,14 +140,14 @@
     "charset":
     {
         "desc": "Character encoding declaration",
-        "elements": ['meta'],
-        "value_keywords": ['utf-8'],
+        "elements": ["meta"],
+        "value_keywords": ["utf-8"],
         "value_type": "Keywords"
     },
     "checked":
     {
         "desc": "Whether the control is checked",
-        "elements": ['input'],
+        "elements": ["input"],
         "value_keywords": [],
         "value_type": "Boolean attribute"
     },
@@ -167,21 +167,21 @@
     "class":
     {
         "desc": "Classes to which the element belongs",
-        "elements": ['HTML'],
+        "elements": ["HTML"],
         "value_keywords": [],
         "value_type": "Set of space-separated tokens"
     },
     "color":
     {
         "desc": "Color to use when customizing a site's icon (for rel=\"mask-icon\")",
-        "elements": ['link'],
+        "elements": ["link"],
         "value_keywords": [],
         "value_type": "CSS <color>"
     },
     "cols":
     {
         "desc": "Maximum number of characters per line",
-        "elements": ['textarea'],
+        "elements": ["textarea"],
         "value_keywords": [],
         "value_type": "Valid non-negative integer greater than zero"
     },
@@ -199,14 +199,14 @@
     "content":
     {
         "desc": "Value of the element",
-        "elements": ['meta'],
+        "elements": ["meta"],
         "value_keywords": [],
         "value_type": "Text. The actual rules are more complicated than indicated"
     },
     "contenteditable":
     {
         "desc": "Whether the element is editable",
-        "elements": ['HTML'],
+        "elements": ["HTML"],
         "value_keywords":
         [
             "false",
@@ -228,7 +228,7 @@
     "coords":
     {
         "desc": "Coordinates for the shape to be created in an image map",
-        "elements": ['area'],
+        "elements": ["area"],
         "value_keywords": [],
         "value_type": "Valid list of floating-point numbers. The actual rules are more complicated than indicated"
     },
@@ -253,7 +253,7 @@
     "data":
     {
         "desc": "Address of the resource",
-        "elements": ['object'],
+        "elements": ["object"],
         "value_keywords": [],
         "value_type": "Valid non-empty URL potentially surrounded by spaces"
     },
@@ -272,7 +272,7 @@
     "decoding":
     {
         "desc": "Decoding hint to use when processing this image for presentation",
-        "elements": ['img'],
+        "elements": ["img"],
         "value_keywords":
         [
             "async",
@@ -284,14 +284,14 @@
     "default":
     {
         "desc": "Enable the track if no other text track is more suitable",
-        "elements": ['track'],
+        "elements": ["track"],
         "value_keywords": [],
         "value_type": "Boolean attribute"
     },
     "defer":
     {
         "desc": "Defer script execution",
-        "elements": ['script'],
+        "elements": ["script"],
         "value_keywords": [],
         "value_type": "Boolean attribute"
     },
@@ -353,7 +353,7 @@
     "draggable":
     {
         "desc": "Whether the element is draggable",
-        "elements": ['HTML'],
+        "elements": ["HTML"],
         "value_keywords":
         [
             "false",
@@ -364,7 +364,7 @@
     "enctype":
     {
         "desc": "Entry list encoding type to use for form submission",
-        "elements": ['form'],
+        "elements": ["form"],
         "value_keywords":
         [
             "application/x-www-form-urlencoded",
@@ -376,7 +376,7 @@
     "enterkeyhint":
     {
         "desc": "Hint for selecting an enter key action",
-        "elements": ['HTML'],
+        "elements": ["HTML"],
         "value_keywords": [],
         "value_type": "\"enter\"; \"done\"; \"go\"; \"next\"; \"previous\"; \"search\" \"send\""
     },
@@ -503,14 +503,14 @@
     "hidden":
     {
         "desc": "Whether the element is relevant",
-        "elements": ['HTML'],
+        "elements": ["HTML"],
         "value_keywords": [],
         "value_type": "Boolean attribute"
     },
     "high":
     {
         "desc": "Low limit of high range",
-        "elements": ['meter'],
+        "elements": ["meter"],
         "value_keywords": [],
         "value_type": "Valid floating-point number. The actual rules are more complicated than indicated"
     },
@@ -541,7 +541,7 @@
     "http-equiv":
     {
         "desc": "Pragma directive",
-        "elements": ['meta'],
+        "elements": ["meta"],
         "value_keywords":
         [
             "content-security-policy",
@@ -555,28 +555,28 @@
     "id":
     {
         "desc": "The element's ID",
-        "elements": ['HTML'],
+        "elements": ["HTML"],
         "value_keywords": [],
         "value_type": "Text. The actual rules are more complicated than indicated"
     },
     "imagesizes":
     {
         "desc": "Image sizes for different page layouts",
-        "elements": ['link'],
+        "elements": ["link"],
         "value_keywords": [],
         "value_type": "Valid source size list"
     },
     "imagesrcset":
     {
         "desc": "Images to use in different situations (e.g., high-resolution displays, small monitors, etc.)",
-        "elements": ['link'],
+        "elements": ["link"],
         "value_keywords": [],
         "value_type": "Comma-separated list of image candidate strings"
     },
     "inputmode":
     {
         "desc": "Hint for selecting an input modality",
-        "elements": ['HTML'],
+        "elements": ["HTML"],
         "value_keywords":
         [
             "decimal",
@@ -604,56 +604,56 @@
     "is":
     {
         "desc": "Creates a customized built-in element",
-        "elements": ['HTML'],
+        "elements": ["HTML"],
         "value_keywords": [],
         "value_type": "Valid custom element name of a defined customized built-in element"
     },
     "ismap":
     {
         "desc": "Whether the image is a server-side image map",
-        "elements": ['img'],
+        "elements": ["img"],
         "value_keywords": [],
         "value_type": "Boolean attribute"
     },
     "itemid":
     {
         "desc": "Global identifier for a microdata item",
-        "elements": ['HTML'],
+        "elements": ["HTML"],
         "value_keywords": [],
         "value_type": "Valid URL potentially surrounded by spaces"
     },
     "itemprop":
     {
         "desc": "Property names of a microdata item",
-        "elements": ['HTML'],
+        "elements": ["HTML"],
         "value_keywords": [],
         "value_type": "Unordered set of unique space-separated tokens, case-sensitive, consisting of valid absolute URLs, defined property names, or text. The actual rules are more complicated than indicated"
     },
     "itemref":
     {
         "desc": "Referenced elements",
-        "elements": ['HTML'],
+        "elements": ["HTML"],
         "value_keywords": [],
         "value_type": "Unordered set of unique space-separated tokens, case-sensitive, consisting of IDs. The actual rules are more complicated than indicated"
     },
     "itemscope":
     {
         "desc": "Introduces a microdata item",
-        "elements": ['HTML'],
+        "elements": ["HTML"],
         "value_keywords": [],
         "value_type": "Boolean attribute"
     },
     "itemtype":
     {
         "desc": "Item types of a microdata item",
-        "elements": ['HTML'],
+        "elements": ["HTML"],
         "value_keywords": [],
         "value_type": "Unordered set of unique space-separated tokens, case-sensitive, consisting of valid absolute URL. The actual rules are more complicated than indicated"
     },
     "kind":
     {
         "desc": "The type of text track",
-        "elements": ['track'],
+        "elements": ["track"],
         "value_keywords":
         [
             "captions",
@@ -679,14 +679,14 @@
     "lang":
     {
         "desc": "Language of the element",
-        "elements": ['HTML'],
+        "elements": ["HTML"],
         "value_keywords": [],
         "value_type": "Valid BCP 47 language tag or the empty string"
     },
     "list":
     {
         "desc": "List of autocomplete options",
-        "elements": ['input'],
+        "elements": ["input"],
         "value_keywords": [],
         "value_type": "ID. The actual rules are more complicated than indicated"
     },
@@ -704,14 +704,14 @@
     "low":
     {
         "desc": "High limit of low range",
-        "elements": ['meter'],
+        "elements": ["meter"],
         "value_keywords": [],
         "value_type": "Valid floating-point number. The actual rules are more complicated than indicated"
     },
     "manifest":
     {
         "desc": "Application cache manifest",
-        "elements": ['html'],
+        "elements": ["html"],
         "value_keywords": [],
         "value_type": "Valid non-empty URL potentially surrounded by spaces"
     },
@@ -753,7 +753,7 @@
     "method":
     {
         "desc": "Variant to use for form submission",
-        "elements": ['form'],
+        "elements": ["form"],
         "value_keywords":
         [
             "GET",
@@ -832,21 +832,21 @@
     "nomodule":
     {
         "desc": "Prevents execution in user agents that support module scripts",
-        "elements": ['script'],
+        "elements": ["script"],
         "value_keywords": [],
         "value_type": "Boolean attribute"
     },
     "nonce":
     {
         "desc": "Cryptographic nonce used in Content Security Policy checks [CSP]",
-        "elements": ['HTML'],
+        "elements": ["HTML"],
         "value_keywords": [],
         "value_type": "Text"
     },
     "novalidate":
     {
         "desc": "Bypass form control validation for form submission",
-        "elements": ['form'],
+        "elements": ["form"],
         "value_keywords": [],
         "value_type": "Boolean attribute"
     },
@@ -864,14 +864,14 @@
     "optimum":
     {
         "desc": "Optimum value in gauge",
-        "elements": ['meter'],
+        "elements": ["meter"],
         "value_keywords": [],
         "value_type": "Valid floating-point number. The actual rules are more complicated than indicated"
     },
     "pattern":
     {
         "desc": "Pattern to be matched by the form control's value",
-        "elements": ['input'],
+        "elements": ["input"],
         "value_keywords": [],
         "value_type": "Regular expression matching the JavaScript Pattern production"
     },
@@ -900,14 +900,14 @@
     "playsinline":
     {
         "desc": "Encourage the user agent to display video content within the element's playback area",
-        "elements": ['video'],
+        "elements": ["video"],
         "value_keywords": [],
         "value_type": "Boolean attribute"
     },
     "poster":
     {
         "desc": "Poster frame to show prior to video playback",
-        "elements": ['video'],
+        "elements": ["video"],
         "value_keywords": [],
         "value_type": "Valid non-empty URL potentially surrounded by spaces"
     },
@@ -981,14 +981,14 @@
     "reversed":
     {
         "desc": "Number the list backwards",
-        "elements": ['ol'],
+        "elements": ["ol"],
         "value_keywords": [],
         "value_type": "Boolean attribute"
     },
     "role":
     {
         "desc": "ARIA semantic role",
-        "elements": ['HTML'],
+        "elements": ["HTML"],
         "value_keywords":
         [
             "alert",
@@ -1059,7 +1059,7 @@
     "rows":
     {
         "desc": "Number of lines to show",
-        "elements": ['textarea'],
+        "elements": ["textarea"],
         "value_keywords": [],
         "value_type": "Valid non-negative integer greater than zero"
     },
@@ -1077,14 +1077,14 @@
     "sandbox":
     {
         "desc": "Security rules for nested content",
-        "elements": ['iframe'],
+        "elements": ["iframe"],
         "value_keywords": [],
         "value_type": "Unordered set of unique space-separated tokens, ASCII case-insensitive, consisting of \"allow-forms\", \"allow-modals\", \"allow-orientation-lock\", \"allow-pointer-lock\", \"allow-popups\", \"allow-popups-to-escape-sandbox\", \"allow-presentation\", \"allow-same-origin\", \"allow-scripts\" and \"allow-top-navigation\""
     },
     "scope":
     {
         "desc": "Specifies which cells the header cell applies to",
-        "elements": ['th'],
+        "elements": ["th"],
         "value_keywords":
         [
             "col",
@@ -1097,14 +1097,14 @@
     "selected":
     {
         "desc": "Whether the option is selected by default",
-        "elements": ['option'],
+        "elements": ["option"],
         "value_keywords": [],
         "value_type": "Boolean attribute"
     },
     "shape":
     {
         "desc": "The kind of shape to be created in an image map",
-        "elements": ['area'],
+        "elements": ["area"],
         "value_keywords":
         [
             "circle",
@@ -1140,7 +1140,7 @@
     "slot":
     {
         "desc": "The element's desired slot",
-        "elements": ['HTML'],
+        "elements": ["HTML"],
         "value_keywords": [],
         "value_type": "Text"
     },
@@ -1158,7 +1158,7 @@
     "spellcheck":
     {
         "desc": "Whether the element is to have its spelling and grammar checked",
-        "elements": ['HTML'],
+        "elements": ["HTML"],
         "value_keywords":
         [
             "false",
@@ -1187,14 +1187,14 @@
     "srcdoc":
     {
         "desc": "A document to render in the iframe",
-        "elements": ['iframe'],
+        "elements": ["iframe"],
         "value_keywords": [],
         "value_type": "The source of an iframe srcdoc document. The actual rules are more complicated than indicated"
     },
     "srclang":
     {
         "desc": "Language of the text track",
-        "elements": ['track'],
+        "elements": ["track"],
         "value_keywords": [],
         "value_type": "Valid BCP 47 language tag"
     },
@@ -1212,28 +1212,28 @@
     "start":
     {
         "desc": "Starting value of the list",
-        "elements": ['ol'],
+        "elements": ["ol"],
         "value_keywords": [],
         "value_type": "Valid integer"
     },
     "step":
     {
         "desc": "Granularity to be matched by the form control's value",
-        "elements": ['input'],
+        "elements": ["input"],
         "value_keywords": [],
         "value_type": "Valid floating-point number greater than zero, or \"any\""
     },
     "style":
     {
         "desc": "Presentational and formatting instructions",
-        "elements": ['HTML'],
+        "elements": ["HTML"],
         "value_keywords": [],
         "value_type": "CSS declarations. The actual rules are more complicated than indicated"
     },
     "tabindex":
     {
         "desc": "Whether the element is focusable, and the relative order of the element for the purposes of sequential focus navigation",
-        "elements": ['HTML'],
+        "elements": ["HTML"],
         "value_keywords": [],
         "value_type": "Valid integer"
     },
@@ -1268,7 +1268,7 @@
     "translate":
     {
         "desc": "Whether the element is to be translated when the page is localized",
-        "elements": ['HTML'],
+        "elements": ["HTML"],
         "value_keywords":
         [
             "no",
@@ -1370,7 +1370,7 @@
     "wrap":
     {
         "desc": "How the value of the form control is to be wrapped for form submission",
-        "elements": ['textarea'],
+        "elements": ["textarea"],
         "value_keywords":
         [
             "hard",

@@ -31,7 +31,7 @@ def pformat_set(xs, indent=0):
 
     if xs and len(xs) == 1:
         yield "["
-        yield repr(next(iter(xs)))
+        yield json.dumps(next(iter(xs)))
         yield "]"
         return
 
