@@ -1,7 +1,7 @@
 .PHONY: default clean
 default: all ;
 
-specs=indices.html dom.html input.html
+specs=indices.html dom.html input.html syntax.html
 
 clean:
 	rm -f timestamp

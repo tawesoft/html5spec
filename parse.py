@@ -4,6 +4,7 @@ from fmt import *
 from collections import namedtuple
 from bs4 import BeautifulSoup
 from pathlib import Path
+from slugify import slugify
 import re
 
 specdir = Path("contrib")
@@ -238,6 +239,27 @@ def parse_element_exceptions_string(xs):
             yield matches.group(1)
 
 
+def parse_element_types(soup):
+    rows = soup.find("h4", {"id": "elements-2"}).findNext("dl")
+    result = {}
+
+    for dt, dd in grouper(rows, 2):
+        elements = dd.find_all("code")
+        if not elements: continue
+
+        dfn = dt.find("dfn").get_text()
+        dfn = slugify(dfn)
+        if dfn not in result:
+            result[dfn] = []
+
+        for element in elements:
+            name = element.get_text()
+            print(name)
+            result[dfn].append(name)
+
+    return result
+
+
 def element_wrapper(element_name):
     """NOTE: Not injection safe"""
     def f(content):
@@ -268,6 +290,12 @@ g_attributes.append(t_attribute("role", set(["HTML"]),
     "ARIA semantic role", "A concrete ARIA role", set(parse_aria_roles(g_soup))))
 
 
+with (specdir / "syntax.html").open("r") as fp:
+    g_soup = BeautifulSoup(fp, "lxml")
+
+g_element_types = parse_element_types(g_soup)
+
+
 META={
     "copyright": COPYING
 }
@@ -282,7 +310,8 @@ outputs = [
     ("elements", g_elements),
     ("categories", g_categories),
     ("attributes", g_attributes),
-    ("event_handlers", g_event_handlers)
+    ("event-handlers", g_event_handlers),
+    ("element-types", g_element_types)
 ]
 
 for k, v in outputs:

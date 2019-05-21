@@ -29,6 +29,13 @@ def list_lastitems(xs):
         yield x, y is None
 
 
+def grouper(iterable, n, fillvalue=None):
+    "Collect data into fixed-length chunks or blocks"
+    # grouper('ABCDEFG', 3, 'x') --> ABC DEF Gxx"
+    args = [iter(iterable)] * n
+    return itertools.zip_longest(*args, fillvalue=fillvalue)
+
+
 def dictify_namedtuples(xs: List[namedtuple], merge=True, meta=None):
     """Convert a list of named tuples do a dict where the key is the first
     item in each tuple and each tuple has a unique key."""
