@@ -311,7 +311,7 @@ outputs = [
     ("categories", g_categories),
     ("attributes", g_attributes),
     ("event-handlers", g_event_handlers),
-    ("element-types", g_element_types)
+    ("element-types", g_element_types),
 ]
 
 for k, v in outputs:
