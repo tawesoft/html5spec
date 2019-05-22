@@ -1315,7 +1315,7 @@
         "attributes":
         [
             "accesskey",
-            "any*",
+            "any",
             "autocapitalize",
             "class",
             "contenteditable",
@@ -2394,7 +2394,7 @@
             "tabindex",
             "title",
             "translate",
-            "value*"
+            "value"
         ],
         "categories": ["none"],
         "children": ["flow"],

@@ -86,7 +86,7 @@ def gen_elements(element):
 
 def gen_attributes(attributes):
     for attribute in attributes.split(";"):
-        attr = attribute.strip()
+        attr = attribute.strip("*").strip()
 
         if attr == "type\nsrcset":
             # Fix a bug in the spec formatting
@@ -254,7 +254,6 @@ def parse_element_types(soup):
 
         for element in elements:
             name = element.get_text()
-            print(name)
             result[dfn].append(name)
 
     return result
