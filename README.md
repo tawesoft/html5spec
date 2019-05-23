@@ -1,4 +1,4 @@
-html5spec.json
+html5spec
 ================================================================================
 
 This repository contains Python code that generates machine-readable JSON
