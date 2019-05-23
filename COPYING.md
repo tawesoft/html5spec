@@ -1,8 +1,8 @@
-COPYING html5spec.json
-======================
+COPYING html5spec
+=================
 
-Python files
-------------
+Python files and documentation
+------------------------------
 
 Copyright © 2019 Ben Golightly \<ben@tawesoft.co.uk\>  
 Copyright © 2019 Tawesoft Ltd \<opensource@tawesoft.co.uk\>
@@ -29,4 +29,13 @@ SOFTWARE.
 Downloaded specs and generated machine-readable output
 ------------------------------------------------------
 
-See COPYING.txt
+The HTML Living Standard is Copyright © 2018 WHATWG (Apple, Google, Mozilla,
+Microsoft) and available under a Creative Commons Attribution 4.0 International
+License: see https://whatwg.org/ and
+https://creativecommons.org/licenses/by/4.0/
+
+Accessible Rich Internet Applications (WAI-ARIA) is Copyright © 2013-2019 W3C®
+(MIT, ERCIM, Keio, Beihang) and available under the W3C Document License: see
+https://w3c.github.io/aria/ and
+https://www.w3.org/Consortium/Legal/2015/doc-license or
+W3C-Document-License.html where provided
