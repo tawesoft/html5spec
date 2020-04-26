@@ -5,7 +5,7 @@
         [
             "The HTML Living Standard is Copyright \u00a9 2018 WHATWG (Apple, Google, Mozilla, Microsoft) and available under a Creative Commons Attribution 4.0 International License: see https://whatwg.org/ and https://creativecommons.org/licenses/by/4.0/",
             "Accessible Rich Internet Applications (WAI-ARIA) is Copyright \u00a9 2013-2019 W3C\u00ae (MIT, ERCIM, Keio, Beihang) and available under the W3C Document License: see https://w3c.github.io/aria/ and https://www.w3.org/Consortium/Legal/2015/doc-license or W3C-Document-License.html where provided",
-            "Based on current published specifications accessed Thu 23 May 13:50:08 UTC 2019"
+            "Based on current published specifications accessed Sun 26 Apr 22:47:04 UTC 2020"
         ]
     },
     "a":
@@ -598,7 +598,6 @@
         [
             "accesskey",
             "autocapitalize",
-            "autofocus",
             "class",
             "contenteditable",
             "dir",
@@ -2108,9 +2107,11 @@
             "itemscope",
             "itemtype",
             "lang",
+            "loading",
             "nonce",
             "referrerpolicy",
             "role",
+            "sizes",
             "slot",
             "spellcheck",
             "src",
@@ -2143,7 +2144,6 @@
             "alt",
             "autocapitalize",
             "autocomplete",
-            "autofocus",
             "checked",
             "class",
             "contenteditable",
@@ -2362,7 +2362,11 @@
             "translate"
         ],
         "categories": ["none"],
-        "children": ["phrasing"],
+        "children":
+        [
+            "heading content",
+            "phrasing"
+        ],
         "desc": "Caption for fieldset"
     },
     "li":
@@ -3539,7 +3543,6 @@
             "accesskey",
             "autocapitalize",
             "autocomplete",
-            "autofocus",
             "class",
             "contenteditable",
             "dir",
@@ -3890,7 +3893,11 @@
             "translate"
         ],
         "categories": ["none"],
-        "children": ["phrasing"],
+        "children":
+        [
+            "heading content",
+            "phrasing"
+        ],
         "desc": "Caption for details"
     },
     "sup":
@@ -4113,7 +4120,6 @@
         [
             "accesskey",
             "autocapitalize",
-            "autofocus",
             "class",
             "cols",
             "contenteditable",
