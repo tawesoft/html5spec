@@ -9,9 +9,16 @@ This is a work-in-progress and incomplete without a stable format.
 Contributions are very welcome. Regardless, even in this undeveloped state,
 this project is still a good basis for many real-world applications.
 
-See also: [HTML5 Relax NG schema](https://github.com/unsoup/validator/tree/gh-pages/schema-release/html5)
-
 Type `make` to download and parse the spec.
+
+
+Alternatives / see also
+------------------------
+
+* [strictdom](https://github.com/tawesoft/strictdom) - uses this repo to create a strict wrapper over [dominate](https://github.com/Knio/dominate), a Python library for creating and manipulating HTML documents .
+* [HTML5 Relax NG schema](https://github.com/unsoup/validator/tree/gh-pages/schema-release/html5)
+* [Gostar - a fluent HTML builder for Go built directly from the HTML Living Standard](https://github.com/delaneyj/gostar)
+    + similarly, this [contains a spec encoded as Go](https://github.com/delaneyj/gostar/blob/main/cfg/spec_html.go)
 
 
 Scope & Mission Statement
@@ -29,10 +36,4 @@ human author and catch obvious errors - but not replace the human author
 entirely.
 
 
-Projects using html5spec.json
---------------------------------------------------------------------------------
-
-* [strictdom](https://github.com/tawesoft/strictdom)
-
-Please open an issue or pull request to add a project to this list.
 
