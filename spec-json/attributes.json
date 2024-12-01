@@ -5,7 +5,7 @@
         [
             "The HTML Living Standard is Copyright \u00a9 2018 WHATWG (Apple, Google, Mozilla, Microsoft) and available under a Creative Commons Attribution 4.0 International License: see https://whatwg.org/ and https://creativecommons.org/licenses/by/4.0/",
             "Accessible Rich Internet Applications (WAI-ARIA) is Copyright \u00a9 2013-2019 W3C\u00ae (MIT, ERCIM, Keio, Beihang) and available under the W3C Document License: see https://w3c.github.io/aria/ and https://www.w3.org/Consortium/Legal/2015/doc-license or W3C-Document-License.html where provided",
-            "Based on current published specifications accessed Sun 26 Apr 22:47:04 UTC 2020"
+            "Based on current published specifications accessed Sun Dec  1 11:26:47 PM UTC 2024"
         ]
     },
     "abbr":
@@ -34,7 +34,7 @@
         "desc": "Keyboard shortcut to activate or focus element",
         "elements": ["HTML"],
         "value_keywords": [],
-        "value_type": "Ordered set of unique space-separated tokens, case-sensitive, consisting of one code point in length"
+        "value_type": "Ordered set of unique space-separated tokens, none of which are identical to another, each consisting of one code point in length"
     },
     "action":
     {
@@ -45,10 +45,10 @@
     },
     "allow":
     {
-        "desc": "Feature policy to be applied to the iframe's contents",
+        "desc": "Permissions policy to be applied to the iframe's contents",
         "elements": ["iframe"],
         "value_keywords": [],
-        "value_type": "Serialized feature policy"
+        "value_type": "Serialized permissions policy"
     },
     "allowfullscreen":
     {
@@ -57,10 +57,10 @@
         "value_keywords": [],
         "value_type": "Boolean attribute"
     },
-    "allowpaymentrequest":
+    "alpha":
     {
-        "desc": "Whether the iframe's contents are allowed to use the PaymentRequest interface to make payment requests",
-        "elements": ["iframe"],
+        "desc": "Allow the color's alpha component to be set",
+        "elements": ["input"],
         "value_keywords": [],
         "value_type": "Boolean attribute"
     },
@@ -129,6 +129,17 @@
         "value_keywords": [],
         "value_type": "Autofill field name and related tokens. The actual rules are more complicated than indicated"
     },
+    "autocorrect":
+    {
+        "desc": "Recommended autocorrection behavior (for supported input methods)",
+        "elements": ["HTML"],
+        "value_keywords":
+        [
+            "off",
+            "on"
+        ],
+        "value_type": "Keywords"
+    },
     "autofocus":
     {
         "desc": "Automatically focus the element when the page is loaded",
@@ -146,6 +157,18 @@
         ],
         "value_keywords": [],
         "value_type": "Boolean attribute"
+    },
+    "blocking":
+    {
+        "desc": "Whether the element is potentially render-blocking",
+        "elements":
+        [
+            "link",
+            "script",
+            "style"
+        ],
+        "value_keywords": [],
+        "value_type": "Unordered set of unique space-separated tokens. The actual rules are more complicated than indicated"
     },
     "charset":
     {
@@ -188,6 +211,17 @@
         "value_keywords": [],
         "value_type": "CSS <color>"
     },
+    "colorspace":
+    {
+        "desc": "The color space of the serialized color",
+        "elements": ["input"],
+        "value_keywords":
+        [
+            "display-p3",
+            "limited-srgb"
+        ],
+        "value_type": "Keywords"
+    },
     "cols":
     {
         "desc": "Maximum number of characters per line",
@@ -220,6 +254,7 @@
         "value_keywords":
         [
             "false",
+            "plaintext-only",
             "true"
         ],
         "value_type": "Keywords"
@@ -368,12 +403,20 @@
     {
         "desc": "Whether the descendant form controls, except any inside legend, are disabled",
         "elements": ["fieldset"],
+        "next": "disabled(3)",
+        "value_keywords": [],
+        "value_type": "Boolean attribute"
+    },
+    "disabled(3)":
+    {
+        "desc": "Whether the link is disabled",
+        "elements": ["link"],
         "value_keywords": [],
         "value_type": "Boolean attribute"
     },
     "download":
     {
-        "desc": "Whether to download the resource instead of navigating to it, and its file name if so",
+        "desc": "Whether to download the resource instead of navigating to it, and its filename if so",
         "elements":
         [
             "a",
@@ -421,6 +464,23 @@
         ],
         "value_type": "Keywords"
     },
+    "fetchpriority":
+    {
+        "desc": "Sets the priority for fetches initiated by the element",
+        "elements":
+        [
+            "img",
+            "link",
+            "script"
+        ],
+        "value_keywords":
+        [
+            "auto",
+            "high",
+            "low"
+        ],
+        "value_type": "Keywords"
+    },
     "for":
     {
         "desc": "Associate the label with form control",
@@ -434,7 +494,7 @@
         "desc": "Specifies controls from which the output was calculated",
         "elements": ["output"],
         "value_keywords": [],
-        "value_type": "Unordered set of unique space-separated tokens, case-sensitive, consisting of IDs. The actual rules are more complicated than indicated"
+        "value_type": "Unordered set of unique space-separated tokens consisting of IDs. The actual rules are more complicated than indicated"
     },
     "form":
     {
@@ -509,14 +569,14 @@
     },
     "formtarget":
     {
-        "desc": "Browsing context for form submission",
+        "desc": "Navigable for form submission",
         "elements":
         [
             "button",
             "input"
         ],
         "value_keywords": [],
-        "value_type": "Valid browsing context name or keyword"
+        "value_type": "Valid navigable target name or keyword"
     },
     "headers":
     {
@@ -527,13 +587,14 @@
             "th"
         ],
         "value_keywords": [],
-        "value_type": "Unordered set of unique space-separated tokens, case-sensitive, consisting of IDs. The actual rules are more complicated than indicated"
+        "value_type": "Unordered set of unique space-separated tokens consisting of IDs. The actual rules are more complicated than indicated"
     },
     "height":
     {
         "desc": "Vertical dimension",
         "elements":
         [
+            "(in",
             "canvas",
             "embed",
             "iframe",
@@ -550,7 +611,7 @@
         "desc": "Whether the element is relevant",
         "elements": ["HTML"],
         "value_keywords": [],
-        "value_type": "Boolean attribute"
+        "value_type": "\"until-found\"; \"hidden\"; the empty string"
     },
     "high":
     {
@@ -620,17 +681,24 @@
     },
     "imagesizes":
     {
-        "desc": "Image sizes for different page layouts",
+        "desc": "Image sizes for different page layouts (for rel=\"preload\")",
         "elements": ["link"],
         "value_keywords": [],
         "value_type": "Valid source size list"
     },
     "imagesrcset":
     {
-        "desc": "Images to use in different situations (e.g., high-resolution displays, small monitors, etc.)",
+        "desc": "Images to use in different situations, e.g., high-resolution displays, small monitors, etc. (for rel=\"preload\")",
         "elements": ["link"],
         "value_keywords": [],
         "value_type": "Comma-separated list of image candidate strings"
+    },
+    "inert":
+    {
+        "desc": "Whether the element is inert.",
+        "elements": ["HTML"],
+        "value_keywords": [],
+        "value_type": "Boolean attribute"
     },
     "inputmode":
     {
@@ -686,14 +754,14 @@
         "desc": "Property names of a microdata item",
         "elements": ["HTML"],
         "value_keywords": [],
-        "value_type": "Unordered set of unique space-separated tokens, case-sensitive, consisting of valid absolute URLs, defined property names, or text. The actual rules are more complicated than indicated"
+        "value_type": "Unordered set of unique space-separated tokens consisting of valid absolute URLs, defined property names, or text. The actual rules are more complicated than indicated"
     },
     "itemref":
     {
         "desc": "Referenced elements",
         "elements": ["HTML"],
         "value_keywords": [],
-        "value_type": "Unordered set of unique space-separated tokens, case-sensitive, consisting of IDs. The actual rules are more complicated than indicated"
+        "value_type": "Unordered set of unique space-separated tokens consisting of IDs. The actual rules are more complicated than indicated"
     },
     "itemscope":
     {
@@ -707,7 +775,7 @@
         "desc": "Item types of a microdata item",
         "elements": ["HTML"],
         "value_keywords": [],
-        "value_type": "Unordered set of unique space-separated tokens, case-sensitive, consisting of valid absolute URL. The actual rules are more complicated than indicated"
+        "value_type": "Unordered set of unique space-separated tokens consisting of valid absolute URLs. The actual rules are more complicated than indicated"
     },
     "kind":
     {
@@ -752,7 +820,11 @@
     "loading":
     {
         "desc": "Used when determining loading deferral",
-        "elements": ["img"],
+        "elements":
+        [
+            "iframe",
+            "img"
+        ],
         "value_keywords":
         [
             "eager",
@@ -777,13 +849,6 @@
         "elements": ["meter"],
         "value_keywords": [],
         "value_type": "Valid floating-point number. The actual rules are more complicated than indicated"
-    },
-    "manifest":
-    {
-        "desc": "Application cache manifest",
-        "elements": ["html"],
-        "value_keywords": [],
-        "value_type": "Valid non-empty URL potentially surrounded by spaces"
     },
     "max":
     {
@@ -821,6 +886,7 @@
         "elements":
         [
             "link",
+            "meta",
             "source",
             "style"
         ],
@@ -906,47 +972,47 @@
     },
     "name(2)":
     {
-        "desc": "Name of form to use in the document.forms API",
-        "elements": ["form"],
+        "desc": "Name of group of mutually-exclusive details elements",
+        "elements": ["details"],
         "next": "name(3)",
         "value_keywords": [],
         "value_type": "Text. The actual rules are more complicated than indicated"
     },
     "name(3)":
     {
-        "desc": "Name of nested browsing context",
+        "desc": "Name of form to use in the document.forms API",
+        "elements": ["form"],
+        "next": "name(4)",
+        "value_keywords": [],
+        "value_type": "Text. The actual rules are more complicated than indicated"
+    },
+    "name(4)":
+    {
+        "desc": "Name of content navigable",
         "elements":
         [
             "iframe",
             "object"
         ],
-        "next": "name(4)",
-        "value_keywords": [],
-        "value_type": "Valid browsing context name or keyword"
-    },
-    "name(4)":
-    {
-        "desc": "Name of image map to reference from the usemap attribute",
-        "elements": ["map"],
         "next": "name(5)",
         "value_keywords": [],
-        "value_type": "Text. The actual rules are more complicated than indicated"
+        "value_type": "Valid navigable target name or keyword"
     },
     "name(5)":
     {
-        "desc": "Metadata name",
-        "elements": ["meta"],
+        "desc": "Name of image map to reference from the usemap attribute",
+        "elements": ["map"],
         "next": "name(6)",
         "value_keywords": [],
         "value_type": "Text. The actual rules are more complicated than indicated"
     },
     "name(6)":
     {
-        "desc": "Name of parameter",
-        "elements": ["param"],
+        "desc": "Metadata name",
+        "elements": ["meta"],
         "next": "name(7)",
         "value_keywords": [],
-        "value_type": "Text"
+        "value_type": "Text. The actual rules are more complicated than indicated"
     },
     "name(7)":
     {
@@ -1033,6 +1099,40 @@
         "elements": ["video"],
         "value_keywords": [],
         "value_type": "Boolean attribute"
+    },
+    "popover":
+    {
+        "desc": "Makes the element a popover element",
+        "elements": ["HTML"],
+        "value_keywords": [],
+        "value_type": "\"auto\"; \"manual\";"
+    },
+    "popovertarget":
+    {
+        "desc": "Targets a popover element to toggle, show, or hide",
+        "elements":
+        [
+            "button",
+            "input"
+        ],
+        "value_keywords": [],
+        "value_type": "ID. The actual rules are more complicated than indicated"
+    },
+    "popovertargetaction":
+    {
+        "desc": "Indicates whether a targeted popover element is to be toggled, shown, or hidden",
+        "elements":
+        [
+            "button",
+            "input"
+        ],
+        "value_keywords":
+        [
+            "hide",
+            "show",
+            "toggle"
+        ],
+        "value_type": "Keywords"
     },
     "poster":
     {
@@ -1139,13 +1239,11 @@
             "alertdialog",
             "application",
             "article",
-            "associationlist",
-            "associationlistitemkey",
-            "associationlistitemvalue",
             "banner",
             "blockquote",
             "caption",
             "cell",
+            "code",
             "columnheader",
             "command",
             "comment",
@@ -1168,8 +1266,6 @@
             "img",
             "input",
             "insertion",
-            "label",
-            "legend",
             "list",
             "listitem",
             "log",
@@ -1229,7 +1325,7 @@
         "desc": "Security rules for nested content",
         "elements": ["iframe"],
         "value_keywords": [],
-        "value_type": "Unordered set of unique space-separated tokens, ASCII case-insensitive, consisting of \"allow-forms\", \"allow-modals\", \"allow-orientation-lock\", \"allow-pointer-lock\", \"allow-popups\", \"allow-popups-to-escape-sandbox\", \"allow-presentation\", \"allow-same-origin\", \"allow-scripts\" and \"allow-top-navigation\""
+        "value_type": "Unordered set of unique space-separated tokens, ASCII case-insensitive, consisting of \"allow-downloads\"\"allow-forms\"\"allow-modals\"\"allow-orientation-lock\"\"allow-pointer-lock\"\"allow-popups\"\"allow-popups-to-escape-sandbox\"\"allow-presentation\"\"allow-same-origin\"\"allow-scripts\"\"allow-top-navigation\"\"allow-top-navigation-by-user-activation\"\"allow-top-navigation-to-custom-protocols\""
     },
     "scope":
     {
@@ -1248,6 +1344,38 @@
     {
         "desc": "Whether the option is selected by default",
         "elements": ["option"],
+        "value_keywords": [],
+        "value_type": "Boolean attribute"
+    },
+    "shadowrootclonable":
+    {
+        "desc": "Sets clonable on a declarative shadow root",
+        "elements": ["template"],
+        "value_keywords": [],
+        "value_type": "Boolean attribute"
+    },
+    "shadowrootdelegatesfocus":
+    {
+        "desc": "Sets delegates focus on a declarative shadow root",
+        "elements": ["template"],
+        "value_keywords": [],
+        "value_type": "Boolean attribute"
+    },
+    "shadowrootmode":
+    {
+        "desc": "Enables streaming declarative shadow roots",
+        "elements": ["template"],
+        "value_keywords":
+        [
+            "closed",
+            "open"
+        ],
+        "value_type": "Keywords"
+    },
+    "shadowrootserializable":
+    {
+        "desc": "Sets serializable on a declarative shadow root",
+        "elements": ["template"],
         "value_keywords": [],
         "value_type": "Boolean attribute"
     },
@@ -1316,25 +1444,21 @@
     {
         "desc": "Whether the element is to have its spelling and grammar checked",
         "elements": ["HTML"],
-        "value_keywords":
-        [
-            "false",
-            "true"
-        ],
-        "value_type": "Keywords"
+        "value_keywords": [],
+        "value_type": "\"true\"; \"false\"; the empty string"
     },
     "src":
     {
         "desc": "Address of the resource",
         "elements":
         [
+            "(in",
             "audio",
             "embed",
             "iframe",
             "img",
             "input",
             "script",
-            "source",
             "track",
             "video"
         ],
@@ -1357,7 +1481,7 @@
     },
     "srcset":
     {
-        "desc": "Images to use in different situations (e.g., high-resolution displays, small monitors, etc.)",
+        "desc": "Images to use in different situations, e.g., high-resolution displays, small monitors, etc.",
         "elements":
         [
             "img",
@@ -1396,7 +1520,7 @@
     },
     "target":
     {
-        "desc": "Browsing context for hyperlink navigation",
+        "desc": "Navigable for hyperlink navigation",
         "elements":
         [
             "a",
@@ -1404,22 +1528,22 @@
         ],
         "next": "target(2)",
         "value_keywords": [],
-        "value_type": "Valid browsing context name or keyword"
+        "value_type": "Valid navigable target name or keyword"
     },
     "target(2)":
     {
-        "desc": "Default browsing context for hyperlink navigation and form submission",
+        "desc": "Default navigable for hyperlink navigation and form submission",
         "elements": ["base"],
         "next": "target(3)",
         "value_keywords": [],
-        "value_type": "Valid browsing context name or keyword"
+        "value_type": "Valid navigable target name or keyword"
     },
     "target(3)":
     {
-        "desc": "Browsing context for form submission",
+        "desc": "Navigable for form submission",
         "elements": ["form"],
         "value_keywords": [],
-        "value_type": "Valid browsing context name or keyword"
+        "value_type": "Valid navigable target name or keyword"
     },
     "title":
     {
@@ -1582,11 +1706,7 @@
     "usemap":
     {
         "desc": "Name of image map to use",
-        "elements":
-        [
-            "img",
-            "object"
-        ],
+        "elements": ["img"],
         "value_keywords": [],
         "value_type": "Valid hash-name reference. The actual rules are more complicated than indicated"
     },
@@ -1634,22 +1754,15 @@
             "meter",
             "progress"
         ],
-        "next": "value(6)",
         "value_keywords": [],
         "value_type": "Valid floating-point number"
-    },
-    "value(6)":
-    {
-        "desc": "Value of parameter",
-        "elements": ["param"],
-        "value_keywords": [],
-        "value_type": "Text"
     },
     "width":
     {
         "desc": "Horizontal dimension",
         "elements":
         [
+            "(in",
             "canvas",
             "embed",
             "iframe",
@@ -1671,5 +1784,12 @@
             "soft"
         ],
         "value_type": "Keywords"
+    },
+    "writingsuggestions":
+    {
+        "desc": "Whether the element can offer writing suggestions or not.",
+        "elements": ["HTML"],
+        "value_keywords": [],
+        "value_type": "\"true\"; \"false\"; the empty string"
     }
 }

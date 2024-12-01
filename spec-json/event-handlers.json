@@ -5,12 +5,8 @@
         [
             "The HTML Living Standard is Copyright \u00a9 2018 WHATWG (Apple, Google, Mozilla, Microsoft) and available under a Creative Commons Attribution 4.0 International License: see https://whatwg.org/ and https://creativecommons.org/licenses/by/4.0/",
             "Accessible Rich Internet Applications (WAI-ARIA) is Copyright \u00a9 2013-2019 W3C\u00ae (MIT, ERCIM, Keio, Beihang) and available under the W3C Document License: see https://w3c.github.io/aria/ and https://www.w3.org/Consortium/Legal/2015/doc-license or W3C-Document-License.html where provided",
-            "Based on current published specifications accessed Sun 26 Apr 22:47:04 UTC 2020"
+            "Based on current published specifications accessed Sun Dec  1 11:26:47 PM UTC 2024"
         ]
-    },
-    "onabort":
-    {
-        "applies_to": "HTML elements"
     },
     "onafterprint":
     {
@@ -20,9 +16,21 @@
     {
         "applies_to": "HTML elements"
     },
+    "onbeforeinput":
+    {
+        "applies_to": "HTML elements"
+    },
+    "onbeforematch":
+    {
+        "applies_to": "HTML elements"
+    },
     "onbeforeprint":
     {
         "applies_to": "body"
+    },
+    "onbeforetoggle":
+    {
+        "applies_to": "HTML elements"
     },
     "onbeforeunload":
     {
@@ -56,7 +64,15 @@
     {
         "applies_to": "HTML elements"
     },
+    "oncontextlost":
+    {
+        "applies_to": "HTML elements"
+    },
     "oncontextmenu":
+    {
+        "applies_to": "HTML elements"
+    },
+    "oncontextrestored":
     {
         "applies_to": "HTML elements"
     },
@@ -85,10 +101,6 @@
         "applies_to": "HTML elements"
     },
     "ondragenter":
-    {
-        "applies_to": "HTML elements"
-    },
-    "ondragexit":
     {
         "applies_to": "HTML elements"
     },
@@ -224,7 +236,15 @@
     {
         "applies_to": "body"
     },
+    "onpagereveal":
+    {
+        "applies_to": "body"
+    },
     "onpageshow":
+    {
+        "applies_to": "body"
+    },
+    "onpageswap":
     {
         "applies_to": "body"
     },
@@ -269,6 +289,10 @@
         "applies_to": "HTML elements"
     },
     "onscroll":
+    {
+        "applies_to": "HTML elements"
+    },
+    "onscrollend":
     {
         "applies_to": "HTML elements"
     },

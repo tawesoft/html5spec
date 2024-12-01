@@ -5,7 +5,7 @@
         [
             "The HTML Living Standard is Copyright \u00a9 2018 WHATWG (Apple, Google, Mozilla, Microsoft) and available under a Creative Commons Attribution 4.0 International License: see https://whatwg.org/ and https://creativecommons.org/licenses/by/4.0/",
             "Accessible Rich Internet Applications (WAI-ARIA) is Copyright \u00a9 2013-2019 W3C\u00ae (MIT, ERCIM, Keio, Beihang) and available under the W3C Document License: see https://w3c.github.io/aria/ and https://www.w3.org/Consortium/Legal/2015/doc-license or W3C-Document-License.html where provided",
-            "Based on current published specifications accessed Sun 26 Apr 22:47:04 UTC 2020"
+            "Based on current published specifications accessed Sun Dec  1 11:26:47 PM UTC 2024"
         ]
     },
     "a":
@@ -384,7 +384,7 @@
         ],
         "categories": ["metadata"],
         "children": [],
-        "desc": "Base URL and default target browsing context for hyperlinks and forms"
+        "desc": "Base URL and default target navigable for hyperlinks and forms"
     },
     "bdi":
     {
@@ -498,8 +498,7 @@
         "categories":
         [
             "flow",
-            "palpable",
-            "sectioning root"
+            "palpable"
         ],
         "children": ["flow"],
         "desc": "A section quoted from another source"
@@ -536,7 +535,9 @@
             "onoffline",
             "ononline",
             "onpagehide",
+            "onpagereveal",
             "onpageshow",
+            "onpageswap",
             "onpopstate",
             "onrejectionhandled",
             "onstorage",
@@ -550,7 +551,7 @@
             "title",
             "translate"
         ],
-        "categories": ["sectioning root"],
+        "categories": ["none"],
         "children": ["flow"],
         "desc": "Document body"
     },
@@ -622,6 +623,8 @@
             "lang",
             "name",
             "nonce",
+            "popovertarget",
+            "popovertargetaction",
             "role",
             "slot",
             "spellcheck",
@@ -1026,6 +1029,7 @@
         "categories":
         [
             "flow",
+            "palpable",
             "phrasing"
         ],
         "children": ["transparent"],
@@ -1052,6 +1056,7 @@
             "itemscope",
             "itemtype",
             "lang",
+            "name",
             "nonce",
             "open",
             "role",
@@ -1066,8 +1071,7 @@
         [
             "flow",
             "interactive",
-            "palpable",
-            "sectioning root"
+            "palpable"
         ],
         "children":
         [
@@ -1146,11 +1150,7 @@
             "title",
             "translate"
         ],
-        "categories":
-        [
-            "flow",
-            "sectioning root"
-        ],
+        "categories": ["flow"],
         "children": ["flow"],
         "desc": "Dialog box or window"
     },
@@ -1393,8 +1393,7 @@
             "flow",
             "form-associated",
             "listed",
-            "palpable",
-            "sectioning root"
+            "palpable"
         ],
         "children":
         [
@@ -1470,8 +1469,7 @@
         "categories":
         [
             "flow",
-            "palpable",
-            "sectioning root"
+            "palpable"
         ],
         "children":
         [
@@ -1547,6 +1545,7 @@
             "name",
             "nonce",
             "novalidate",
+            "rel",
             "role",
             "slot",
             "spellcheck",
@@ -1601,7 +1600,7 @@
             "palpable"
         ],
         "children": ["phrasing"],
-        "desc": "Section heading"
+        "desc": "Heading"
     },
     "h2":
     {
@@ -1640,7 +1639,7 @@
             "palpable"
         ],
         "children": ["phrasing"],
-        "desc": "Section heading"
+        "desc": "Heading"
     },
     "h3":
     {
@@ -1679,7 +1678,7 @@
             "palpable"
         ],
         "children": ["phrasing"],
-        "desc": "Section heading"
+        "desc": "Heading"
     },
     "h4":
     {
@@ -1718,7 +1717,7 @@
             "palpable"
         ],
         "children": ["phrasing"],
-        "desc": "Section heading"
+        "desc": "Heading"
     },
     "h5":
     {
@@ -1757,7 +1756,7 @@
             "palpable"
         ],
         "children": ["phrasing"],
-        "desc": "Section heading"
+        "desc": "Heading"
     },
     "h6":
     {
@@ -1796,7 +1795,7 @@
             "palpable"
         ],
         "children": ["phrasing"],
-        "desc": "Section heading"
+        "desc": "Heading"
     },
     "head":
     {
@@ -1903,7 +1902,6 @@
         "categories":
         [
             "flow",
-            "heading",
             "palpable"
         ],
         "children":
@@ -1916,7 +1914,7 @@
             "h6",
             "script-supporting elements"
         ],
-        "desc": "heading group"
+        "desc": "Heading container"
     },
     "hr":
     {
@@ -2037,7 +2035,6 @@
             "accesskey",
             "allow",
             "allowfullscreen",
-            "allowpaymentrequest",
             "autocapitalize",
             "class",
             "contenteditable",
@@ -2055,6 +2052,7 @@
             "itemscope",
             "itemtype",
             "lang",
+            "loading",
             "name",
             "nonce",
             "referrerpolicy",
@@ -2079,7 +2077,7 @@
             "phrasing"
         ],
         "children": [],
-        "desc": "Nested browsing context"
+        "desc": "Child navigable"
     },
     "img":
     {
@@ -2095,6 +2093,7 @@
             "dir",
             "draggable",
             "enterkeyhint",
+            "fetchpriority",
             "height",
             "hidden",
             "id",
@@ -2141,11 +2140,13 @@
         [
             "accept",
             "accesskey",
+            "alpha",
             "alt",
             "autocapitalize",
             "autocomplete",
             "checked",
             "class",
+            "colorspace",
             "contenteditable",
             "dir",
             "dirname",
@@ -2179,6 +2180,8 @@
             "nonce",
             "pattern",
             "placeholder",
+            "popovertarget",
+            "popovertargetaction",
             "readonly",
             "required",
             "role",
@@ -2411,12 +2414,16 @@
             "accesskey",
             "as",
             "autocapitalize",
+            "blocking",
             "class",
+            "color",
             "contenteditable",
             "crossorigin",
             "dir",
+            "disabled",
             "draggable",
             "enterkeyhint",
+            "fetchpriority",
             "hidden",
             "href",
             "hreflang",
@@ -2655,6 +2662,7 @@
             "itemscope",
             "itemtype",
             "lang",
+            "media",
             "name",
             "nonce",
             "role",
@@ -2832,7 +2840,6 @@
             "title",
             "translate",
             "type",
-            "usemap",
             "width"
         ],
         "categories":
@@ -2843,15 +2850,10 @@
             "interactive",
             "listed",
             "palpable",
-            "phrasing",
-            "submittable"
+            "phrasing"
         ],
-        "children":
-        [
-            "param",
-            "transparent"
-        ],
-        "desc": "Image, nested browsing context, or plugin"
+        "children": ["transparent"],
+        "desc": "Image, child navigable, or plugin"
     },
     "ol":
     {
@@ -3060,42 +3062,6 @@
         "children": ["phrasing"],
         "desc": "Paragraph"
     },
-    "param":
-    {
-        "attributes":
-        [
-            "accesskey",
-            "autocapitalize",
-            "class",
-            "contenteditable",
-            "dir",
-            "draggable",
-            "enterkeyhint",
-            "hidden",
-            "id",
-            "inputmode",
-            "is",
-            "itemid",
-            "itemprop",
-            "itemref",
-            "itemscope",
-            "itemtype",
-            "lang",
-            "name",
-            "nonce",
-            "role",
-            "slot",
-            "spellcheck",
-            "style",
-            "tabindex",
-            "title",
-            "translate",
-            "value"
-        ],
-        "categories": ["none"],
-        "children": [],
-        "desc": "Parameter for object"
-    },
     "picture":
     {
         "attributes":
@@ -3130,6 +3096,7 @@
         [
             "embedded",
             "flow",
+            "palpable",
             "phrasing"
         ],
         "children":
@@ -3457,6 +3424,7 @@
             "accesskey",
             "async",
             "autocapitalize",
+            "blocking",
             "class",
             "contenteditable",
             "crossorigin",
@@ -3464,6 +3432,7 @@
             "dir",
             "draggable",
             "enterkeyhint",
+            "fetchpriority",
             "hidden",
             "id",
             "inputmode",
@@ -3475,6 +3444,7 @@
             "itemscope",
             "itemtype",
             "lang",
+            "nomodule",
             "nonce",
             "referrerpolicy",
             "role",
@@ -3496,6 +3466,44 @@
         ],
         "children": ["script, data, or script documentation"],
         "desc": "Embedded script"
+    },
+    "search":
+    {
+        "attributes":
+        [
+            "accesskey",
+            "autocapitalize",
+            "class",
+            "contenteditable",
+            "dir",
+            "draggable",
+            "enterkeyhint",
+            "hidden",
+            "id",
+            "inputmode",
+            "is",
+            "itemid",
+            "itemprop",
+            "itemref",
+            "itemscope",
+            "itemtype",
+            "lang",
+            "nonce",
+            "role",
+            "slot",
+            "spellcheck",
+            "style",
+            "tabindex",
+            "title",
+            "translate"
+        ],
+        "categories":
+        [
+            "flow",
+            "palpable"
+        ],
+        "children": ["flow"],
+        "desc": "Container for search controls"
     },
     "section":
     {
@@ -3682,6 +3690,7 @@
             "dir",
             "draggable",
             "enterkeyhint",
+            "height",
             "hidden",
             "id",
             "inputmode",
@@ -3704,7 +3713,8 @@
             "tabindex",
             "title",
             "translate",
-            "type"
+            "type",
+            "width"
         ],
         "categories": ["none"],
         "children": [],
@@ -3794,6 +3804,7 @@
         [
             "accesskey",
             "autocapitalize",
+            "blocking",
             "class",
             "contenteditable",
             "dir",
@@ -4070,7 +4081,7 @@
             "title",
             "translate"
         ],
-        "categories": ["sectioning root"],
+        "categories": ["none"],
         "children": ["flow"],
         "desc": "Table cell"
     },
@@ -4097,6 +4108,10 @@
             "lang",
             "nonce",
             "role",
+            "shadowrootclonable",
+            "shadowrootdelegatesfocus",
+            "shadowrootmode",
+            "shadowrootserializable",
             "slot",
             "spellcheck",
             "style",
@@ -4120,6 +4135,7 @@
         [
             "accesskey",
             "autocapitalize",
+            "autocomplete",
             "class",
             "cols",
             "contenteditable",

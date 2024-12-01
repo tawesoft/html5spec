@@ -5,10 +5,10 @@
         [
             "The HTML Living Standard is Copyright \u00a9 2018 WHATWG (Apple, Google, Mozilla, Microsoft) and available under a Creative Commons Attribution 4.0 International License: see https://whatwg.org/ and https://creativecommons.org/licenses/by/4.0/",
             "Accessible Rich Internet Applications (WAI-ARIA) is Copyright \u00a9 2013-2019 W3C\u00ae (MIT, ERCIM, Keio, Beihang) and available under the W3C Document License: see https://w3c.github.io/aria/ and https://www.w3.org/Consortium/Legal/2015/doc-license or W3C-Document-License.html where provided",
-            "Based on current published specifications accessed Sun 26 Apr 22:47:04 UTC 2020"
+            "Based on current published specifications accessed Sun Dec  1 11:26:47 PM UTC 2024"
         ]
     },
-    "Autocapitalize-inheriting elements":
+    "Autocapitalize-and-autocorrect\n     inheriting elements":
     {
         "elements":
         [
@@ -109,6 +109,7 @@
             "s",
             "samp",
             "script",
+            "search",
             "section",
             "select",
             "slot",
@@ -188,10 +189,9 @@
             "audio",
             "img",
             "input",
-            "object",
             "video"
         ],
-        "exceptions": "a (if the href attribute is present); audio (if the controls attribute is present); img (if the usemap attribute is present); input (if the type attribute is not in the Hidden state); object (if the usemap attribute is present); video (if the controls attribute is present); The tabindex attribute can also make any element into interactive content."
+        "exceptions": "a (if the href attribute is present); audio (if the controls attribute is present); img (if the usemap attribute is present); input (if the type attribute is not in the Hidden state); video (if the controls attribute is present)"
     },
     "Labelable elements":
     {
@@ -259,6 +259,7 @@
             "cite",
             "code",
             "data",
+            "del",
             "details",
             "dfn",
             "div",
@@ -291,12 +292,14 @@
             "object",
             "output",
             "p",
+            "picture",
             "pre",
             "progress",
             "q",
             "ruby",
             "s",
             "samp",
+            "search",
             "section",
             "select",
             "small",
@@ -425,21 +428,6 @@
         "elements_maybe": [],
         "exceptions": ""
     },
-    "Sectioning roots":
-    {
-        "elements":
-        [
-            "blockquote",
-            "body",
-            "details",
-            "dialog",
-            "fieldset",
-            "figure",
-            "td"
-        ],
-        "elements_maybe": [],
-        "exceptions": ""
-    },
     "Submittable elements":
     {
         "elements":
@@ -447,7 +435,6 @@
             "button",
             "custom",
             "input",
-            "object",
             "select",
             "textarea"
         ],
