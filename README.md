@@ -11,6 +11,10 @@ this project is still a good basis for many real-world applications.
 
 Type `make` to download and parse the spec.
 
+This repo currently contains a spec as of 2020, and only
+[small updates](https://github.com/tawesoft/html5spec/issues/6)
+are needed to support the spec as of December 2024.
+
 
 Alternatives / see also
 ------------------------
